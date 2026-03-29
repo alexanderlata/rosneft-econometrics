@@ -15,7 +15,7 @@
 
 |Задачи (ссылка)| Тема| Ссылка на PDF|
 |:-:|-|:-:|
-|[Листок 21](https://nbviewer.org/github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list21-LPM.html)| LPM-модель | [PDF](https://github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list21-LPM.pdf)|
+|[Листок 21](https://nbviewer.org/github/alexanderlata/rosneft-econometrics/blob/main/exercises/list21-LPM.html)| LPM-модель | [PDF](https://github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list21-LPM.pdf)|
 |[Листок 22](https://nbviewer.org/github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list22-logit.html)| Logit/probit модели (оценка и тестирование основных гипотез) |[PDF](https://github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list22-logit.pdf)|
 |[Листок 23](https://nbviewer.org/github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list23-prediction.html)| Прогнозирование |[PDF](https://github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list23-prediction.pdf)|
 |[Листок 24](https://nbviewer.org/github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list24-marginal-values.html)| Предельные значения|[PDF](https://github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list24-marginal-values.pdf)|
