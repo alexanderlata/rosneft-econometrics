@@ -8,8 +8,8 @@
 |`syllabus`|[План семинарских занятий](https://github.com/alexanderlata/rosneft-econometrics/blob/main/syllabus.md)|
 |`exercises`|Листочки с заданиями (исходные код)|
 |`datasets`| Наборы данных в формате CSV|
-|`jupyter-temples`|Шаблоны ноутбуков для решения типовых задач|
-|`jupyter-notebooks`|Разбор примеров из листочков|
+|`templates`|Шаблоны ноутбуков для решения типовых задач|
+|`notebooks`|Разбор примеров из листочков|
 
 ## Задачи
 
