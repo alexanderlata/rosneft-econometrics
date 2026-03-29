@@ -21,10 +21,6 @@
 | [Листок 24](https://nbviewer.org/github/alexanderlata/rosneft-econometrics/blob/main/exercises/list24-marginal-values.html) | Предельные значения | [PDF](https://github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list24-marginal-values.pdf) | [MD](https://github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list24-marginal-values.md) |
 | [Листок 25](https://nbviewer.org/github/alexanderlata/rosneft-econometrics/blob/main/exercises/list25-goodness-of-fit.html) | Качество подгонки и сравнение моделей | [PDF](https://github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list25-goodness-of-fit.pdf) | [MD](https://github.com/alexanderlata/rosneft-econometrics/blob/main/exercises/list25-goodness-of-fit.md) |
 
------
-
-Хотите, чтобы я проверил корректность названий файлов или, возможно, помог составить краткое описание для каждого листка?
-
 
 ## Необходимые библиотеки Python
 
