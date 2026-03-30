@@ -425,7 +425,7 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 <section id="замечание-почему-logfaminc" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="замечание-почему-logfaminc"><span class="header-section-number">1.5</span> Замечание: почему log(FAMINC)</h2>
 <p>Нарисуем гистограмму <span class="math inline">\(\textrm{FAMINC}\)</span> с наложенной кривой нормального распределения</p>
-<div id="cell-fig-faminc-dist" class="cell" data-execution_count="372">
+<div id="cell-fig-faminc-dist" class="cell" data-execution_count="423">
 <div class="cell-output cell-output-display">
 <div id="fig-faminc-dist" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -440,7 +440,7 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </div>
 </div>
 <p>Нарисуем гистограмму <span class="math inline">\(\log(\textrm{FAMINC})\)</span> с наложенной кривой нормального распределения</p>
-<div id="cell-fig-log-faminc" class="cell">
+<div id="cell-fig-log-faminc" class="cell" data-execution_count="424">
 <div class="cell-output cell-output-display">
 <div id="fig-log-faminc" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -678,12 +678,12 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div id="cell-31" class="cell" data-execution_count="381">
+<div id="cell-31" class="cell" data-execution_count="432">
 <div class="cell-output cell-output-display cell-output-markdown">
 <p><strong>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам):</strong> <code>mortno</code>, <code>married</code>.</p>
 </div>
 </div>
-<div id="cell-32" class="cell" data-execution_count="382">
+<div id="cell-32" class="cell" data-execution_count="433">
 <div class="cell-output cell-output-display cell-output-markdown">
 <p><strong>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3):</strong> <code>mortno</code>.</p>
 </div>
@@ -974,14 +974,14 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div id="cell-45" class="cell" data-execution_count="388">
+<div id="cell-45" class="cell" data-execution_count="439">
 <div class="cell-output cell-output-display cell-output-markdown">
 <p><strong>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам):</strong> <code>I(appinc ** 2)</code>, <code>mortno</code>.</p>
 </div>
 </div>
-<div id="cell-46" class="cell">
+<div id="cell-46" class="cell" data-execution_count="440">
 <div class="cell-output cell-output-display cell-output-markdown">
-<p><strong>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам):</strong> <code>I(appinc ** 2)</code>, <code>mortno</code>.</p>
+<p><strong>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3):</strong> <code>mortno</code>.</p>
 </div>
 </div>
 </section>
@@ -1242,12 +1242,12 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div id="cell-58" class="cell" data-execution_count="395">
+<div id="cell-58" class="cell" data-execution_count="446">
 <div class="cell-output cell-output-display cell-output-markdown">
 <p><strong>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам):</strong> <code>WE</code>, <code>KL6</code>.</p>
 </div>
 </div>
-<div id="cell-59" class="cell" data-execution_count="396">
+<div id="cell-59" class="cell" data-execution_count="447">
 <div class="cell-output cell-output-display cell-output-markdown">
 <p><strong>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3):</strong> <code>WE</code>, <code>KL6</code>.</p>
 </div>
@@ -1450,12 +1450,12 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div id="cell-71" class="cell" data-execution_count="402">
+<div id="cell-71" class="cell" data-execution_count="453">
 <div class="cell-output cell-output-display cell-output-markdown">
 <p><strong>Коэффициенты, значимые на уровне 5% (по классическим стандартным ошибкам):</strong> <code>WE</code>, <code>np.log(FAMINC)</code>.</p>
 </div>
 </div>
-<div id="cell-72" class="cell" data-execution_count="403">
+<div id="cell-72" class="cell" data-execution_count="454">
 <div class="cell-output cell-output-display cell-output-markdown">
 <p><strong>Коэффициенты, значимые на уровне 5% (по робастным стандартным ошибкам HC3):</strong> <code>WE</code>, <code>np.log(FAMINC)</code>.</p>
 </div>
