@@ -227,8 +227,6 @@ $t_{crit} = 2.578$
 Результаты $t$-теста для коэффициентов (неробастные стандартные ошибки,
 s.e.)
 
-<style>table { width: auto !important; margin-left: auto; margin-right: auto; }</style>
-
 ### t test of coefficients (OLS Standard Errors)
 
 |           |  Coef. | Std.Err. | t-value | p-value | Signif. |
@@ -246,8 +244,6 @@ s.e.)
 
 Результаты $t$-теста для коэффициентов (робастные стандартные ошибки,
 s.e.)
-
-<style>table { width: auto !important; margin-left: auto; margin-right: auto; }</style>
 
 ### t test of coefficients (Robust Standard Errors: HC3)
 
@@ -332,8 +328,6 @@ $t_{crit} = 2.578$
 Результаты $t$-теста для коэффициентов (неробастные стандартные ошибки,
 s.e.)
 
-<style>table { width: auto !important; margin-left: auto; margin-right: auto; }</style>
-
 ### t test of coefficients (OLS Standard Errors)
 
 |                  |  Coef. | Std.Err. | t-value | p-value | Signif. |
@@ -353,8 +347,6 @@ s.e.)
 
 Результаты $t$-теста для коэффициентов (робастные стандартные ошибки,
 s.e.)
-
-<style>table { width: auto !important; margin-left: auto; margin-right: auto; }</style>
 
 ### t test of coefficients (Robust Standard Errors: HC3)
 
@@ -419,8 +411,6 @@ $t_{crit} = 2.582$
 Результаты $t$-теста для коэффициентов (неробастные стандартные ошибки,
 s.e.)
 
-<style>table { width: auto !important; margin-left: auto; margin-right: auto; }</style>
-
 ### t test of coefficients (OLS Standard Errors)
 
 |                |  Coef. | Std.Err. | t-value | p-value | Signif. |
@@ -439,8 +429,6 @@ s.e.)
 
 Результаты $t$-теста для коэффициентов (робастные стандартные ошибки,
 s.e.)
-
-<style>table { width: auto !important; margin-left: auto; margin-right: auto; }</style>
 
 ### t test of coefficients (Robust Standard Errors: HC3)
 
@@ -501,8 +489,6 @@ $t_{crit} = 1.963$
 Результаты $t$-теста для коэффициентов (неробастные стандартные ошибки,
 s.e.)
 
-<style>table { width: auto !important; margin-left: auto; margin-right: auto; }</style>
-
 ### t test of coefficients (OLS Standard Errors)
 
 |                |  Coef. | Std.Err. | t-value | p-value | Signif. |
@@ -518,8 +504,6 @@ s.e.)
 
 Результаты $t$-теста для коэффициентов (робастные стандартные ошибки,
 s.e.)
-
-<style>table { width: auto !important; margin-left: auto; margin-right: auto; }</style>
 
 ### t test of coefficients (Robust Standard Errors: HC3)
 
