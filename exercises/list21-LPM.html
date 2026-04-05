@@ -441,12 +441,12 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 <section id="замечание-почему-logfaminc" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="замечание-почему-logfaminc"><span class="header-section-number">1.5</span> Замечание: почему log(FAMINC)</h2>
 <p>Нарисуем гистограмму <span class="math inline">\(\textrm{FAMINC}\)</span> с наложенной кривой нормального распределения</p>
-<div id="cell-fig-faminc-dist" class="cell" data-execution_count="2086">
+<div id="cell-fig-faminc-dist" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div id="fig-faminc-dist" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-faminc-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="list21-LPM_files/figure-html/fig-faminc-dist-output-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+<img src="list21-LPM_files/figure-html/fig-faminc-dist-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="806" height="565">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-faminc-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Рисунок&nbsp;1: Гистограмма распределения дохода семьи (<span class="math inline">\(\textrm{FAMINC}\)</span>) с наложением нормальной кривой плотности.
@@ -456,12 +456,12 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </div>
 </div>
 <p>Нарисуем гистограмму <span class="math inline">\(\log(\textrm{FAMINC})\)</span> с наложенной кривой нормального распределения</p>
-<div id="cell-fig-log-faminc" class="cell" data-execution_count="2087">
+<div id="cell-fig-log-faminc" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div id="fig-log-faminc" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-log-faminc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="list21-LPM_files/figure-html/fig-log-faminc-output-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+<img src="list21-LPM_files/figure-html/fig-log-faminc-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="807" height="564">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-log-faminc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Рисунок&nbsp;2: Гистограмма логарифмированного дохода семьи с наложением нормальной кривой плотности.
@@ -523,13 +523,13 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </table>
 <p>Модель была подогнана по 1971 наблюдению. <span style="color: blue">Уровень значимости 1%</span></p>
 <p>Вычислите критическое значения для <span class="math inline">\(t\)</span>-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Критическое значение">
+<div class="callout callout-style-default callout-note callout-titled" title="Критическое значение">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Критическое значение
+<span class="screen-reader-only">Уведомление</span>Критическое значение
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -618,15 +618,15 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div id="cell-33" class="cell" data-execution_count="2095">
+<div id="cell-33" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-display cell-output-markdown">
-<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)">
+<div class="callout callout-style-default callout-note callout-titled" title="Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)
+<span class="screen-reader-only">Уведомление</span>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -716,15 +716,15 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div id="cell-36" class="cell" data-execution_count="2096">
+<div id="cell-36" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-display cell-output-markdown">
-<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)">
+<div class="callout callout-style-default callout-note callout-titled" title="Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)
+<span class="screen-reader-only">Уведомление</span>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -811,13 +811,13 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 <p>Модель была подогнана по 1971 наблюдению. <span style="color: blue">Уровень значимости 1%</span></p>
 <p>Вычислите критическое значения для <span class="math inline">\(t\)</span>-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
 <p>Ответ:</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Критическое значение">
+<div class="callout callout-style-default callout-note callout-titled" title="Критическое значение">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Критическое значение
+<span class="screen-reader-only">Уведомление</span>Критическое значение
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -930,13 +930,13 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)">
+<div class="callout callout-style-default callout-note callout-titled" title="Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)
+<span class="screen-reader-only">Уведомление</span>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1048,13 +1048,13 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)">
+<div class="callout callout-style-default callout-note callout-titled" title="Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)
+<span class="screen-reader-only">Уведомление</span>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1116,13 +1116,13 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 <p>Модель была подогнана по 753 наблюдению. <span style="color: blue">Уровень значимости 1%</span></p>
 <p>Вычислите критическое значения для <span class="math inline">\(t\)</span>-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
 <p>Ответ:</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Критическое значение">
+<div class="callout callout-style-default callout-note callout-titled" title="Критическое значение">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Критическое значение
+<span class="screen-reader-only">Уведомление</span>Критическое значение
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1227,13 +1227,13 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)">
+<div class="callout callout-style-default callout-note callout-titled" title="Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)
+<span class="screen-reader-only">Уведомление</span>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1337,13 +1337,13 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)">
+<div class="callout callout-style-default callout-note callout-titled" title="Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)
+<span class="screen-reader-only">Уведомление</span>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1392,13 +1392,13 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </table>
 <p>Модель была подогнана по 753 наблюдению. <span style="color: blue">Уровень значимости 5%</span></p>
 <p>Вычислите критическое значения для <span class="math inline">\(t\)</span>-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Критическое значение">
+<div class="callout callout-style-default callout-note callout-titled" title="Критическое значение">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Критическое значение
+<span class="screen-reader-only">Уведомление</span>Критическое значение
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1479,13 +1479,13 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 5% (по классическим стандартным ошибкам)">
+<div class="callout callout-style-default callout-note callout-titled" title="Коэффициенты, значимые на уровне 5% (по классическим стандартным ошибкам)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 5% (по классическим стандартным ошибкам)
+<span class="screen-reader-only">Уведомление</span>Коэффициенты, значимые на уровне 5% (по классическим стандартным ошибкам)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1565,13 +1565,13 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 5% (по робастным стандартным ошибкам HC3)">
+<div class="callout callout-style-default callout-note callout-titled" title="Коэффициенты, значимые на уровне 5% (по робастным стандартным ошибкам HC3)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 5% (по робастным стандартным ошибкам HC3)
+<span class="screen-reader-only">Уведомление</span>Коэффициенты, значимые на уровне 5% (по робастным стандартным ошибкам HC3)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1732,12 +1732,12 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 <section id="approve-equation-график-фактических-и-прогнозируемых-значений" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="approve-equation-график-фактических-и-прогнозируемых-значений"><span class="header-section-number">6.1</span> approve equation — график фактических и прогнозируемых значений</h2>
 <p>Для датасета <code>loanapp</code> рассмотрим регрессию <strong>approve на appinc, I(appinc ** 2), mortno, unem, dep, male, married, yjob, self</strong></p>
-<p><img src="list21-LPM_files/figure-html/cell-46-output-1.png" class="img-fluid"></p>
+<p><img src="list21-LPM_files/figure-html/cell-46-output-1.png" width="807" height="565"></p>
 </section>
 <section id="labour-force-equation-график-фактических-и-прогнозируемых-значений" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="labour-force-equation-график-фактических-и-прогнозируемых-значений"><span class="header-section-number">6.2</span> labour force equation — график фактических и прогнозируемых значений</h2>
 <p>Для датасета <code>TableF5-1</code> рассмотрим регрессию <strong>LFP на WA, I(WA ** 2), WE, KL6, K618, CIT, UN, np.log(FAMINC)</strong></p>
-<p><img src="list21-LPM_files/figure-html/cell-47-output-1.png" class="img-fluid"></p>
+<p><img src="list21-LPM_files/figure-html/cell-47-output-1.png" width="807" height="565"></p>
 </section>
 </section>
 
