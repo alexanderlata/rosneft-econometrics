@@ -123,6 +123,22 @@
 
 
 \makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -234,10 +250,24 @@ self & -0.036 & -0.036 \\
 \end{longtable}
 }
 
+\textbf{Дайте интерпретацию коэффициентам модели.}
+
 \subsection{approve equation \#2}\label{approve-equation-2}
 
 Для датасета \texttt{loanapp} рассмотрим регрессию \textbf{approve на
 appinc, I(appinc ** 2), mortno, unem, dep, male, married, yjob, self}
+
+Спецификация:
+
+\begin{equation}
+approve=\beta_0 + \beta_1 appinc + \beta_2 appinc^{2} + \beta_3 mortno+\beta_4 unem + \beta_5 dep + \beta_6 male + \beta_7 married + \beta_8 yjob + \beta_9 self + u
+\end{equation}
+
+Альтернативная спецификация:
+
+\begin{equation}
+P(approve=1)=\beta_0 + \beta_1 appinc + \beta_2 appinc^{2} + \beta_3 mortno+\beta_4 unem + \beta_5 dep + \beta_6 male + \beta_7 married + \beta_8 yjob + \beta_9 self
+\end{equation}
 
 Оцените модель на данных и укажите коэффициенты подогнанной модели.
 \textbf{Ответ округлите до 3-х десятичных знаков.}
@@ -265,10 +295,12 @@ self & -0.04 & -0.04 \\
 \end{longtable}
 }
 
+\textbf{Дайте интерпретацию коэффициентам модели.}
+
 \subsection{labour force equation \#1}\label{labour-force-equation-1}
 
 Для датасета \texttt{TableF5-1} рассмотрим регрессию \textbf{LFP на WA,
-I(WA ** 2), WE, KL6, K618, CIT, UN, log(FAMINC)}
+I(WA ** 2), WE, KL6, K618, CIT, UN, np.log(FAMINC)}
 
 Спецификация:
 
@@ -307,10 +339,24 @@ np.log(FAMINC) & 0.072 & 0.072 \\
 \end{longtable}
 }
 
+\textbf{Дайте интерпретацию коэффициентам модели.}
+
 \subsection{labour force equation \#2}\label{labour-force-equation-2}
 
 Для датасета \texttt{TableF5-1} рассмотрим регрессию \textbf{LFP на WA,
-WE, CIT, UN, log(FAMINC)}
+WE, CIT, UN, np.log(FAMINC)}
+
+Спецификация:
+
+\begin{equation}
+LFP = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5 UN + \beta_6 \log(FAMINC)+u
+\end{equation}
+
+Альтернативная спецификация:
+
+\begin{equation}
+P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5 UN + \beta_6 \log(FAMINC)
+\end{equation}
 
 Оцените модель на данных и укажите коэффициенты подогнанной модели.
 \textbf{Ответ округлите до 3-х десятичных знаков.}
@@ -333,6 +379,8 @@ UN & -0.005 & -0.005 \\
 np.log(FAMINC) & 0.094 & 0.094 \\
 \end{longtable}
 }
+
+\textbf{Дайте интерпретацию коэффициентам модели.}
 
 \subsection{Замечание: почему
 log(FAMINC)}\label{ux437ux430ux43cux435ux447ux430ux43dux438ux435-ux43fux43eux447ux435ux43cux443-logfaminc}
@@ -365,8 +413,7 @@ log(FAMINC)}\label{ux437ux430ux43cux435ux447ux430ux43dux438ux435-ux43fux43eux447
 }
 
 \caption{\label{fig-log-faminc}Гистограмма логарифмированного дохода
-семьи (\(\log(\textrm{FAMINC})\)) с наложением нормальной кривой
-плотности.}
+семьи с наложением нормальной кривой плотности.}
 
 \end{figure}%
 
@@ -406,18 +453,17 @@ self & -0.036 \\
 Вычислите критическое значения для \(t\)-теста. \textbf{Ответ округлите
 до 3-х десятичных знаков.}
 
-Ответ:
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Критическое значение}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 \(t_{crit} = 2.578\)
+
+\end{tcolorbox}
 
 \textbf{Укажите результаты робастного и неробастного \(t\)-теста. Ответ
 округлите до 3-х десятичных знаков.}
 
-Результаты \(t\)-теста для коэффициентов (неробастные стандартные
-ошибки, s.e.)
-
-\subsubsection{t test of coefficients (OLS Standard
-Errors)}\label{t-test-of-coefficients-ols-standard-errors}
+\textbf{Результаты \(t\)-теста для коэффициентов (неробастные
+стандартные ошибки, s.e.)}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lrrrrl@{}}
@@ -441,11 +487,17 @@ self & -0.036 & 0.022 & -1.621 & 0.105 & \\
 \emph{Signif. codes:} \texttt{***} \(p<0.01\), \texttt{**} \(p<0.05\),
 \texttt{*} \(p<0.1\)
 
-Результаты \(t\)-теста для коэффициентов (робастные стандартные ошибки,
-s.e.)
+Какие коэффициенты значимы?
 
-\subsubsection{t test of coefficients (Robust Standard Errors:
-HC3)}\label{t-test-of-coefficients-robust-standard-errors-hc3}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Коэффициенты, значимые на уровне 1\% (по классическим стандартным
+ошибкам)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\texttt{mortno}, \texttt{married}
+
+\end{tcolorbox}
+
+\textbf{Результаты \(t\)-теста для коэффициентов (робастные стандартные
+ошибки, HC3-s.e.): }
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lrrrrl@{}}
@@ -471,13 +523,14 @@ self & -0.036 & 0.025 & -1.464 & 0.143 & \\
 
 Какие коэффициенты значимы?
 
-\textbf{Коэффициенты, значимые на уровне 1\% (по классическим
-стандартным ошибкам):} \texttt{mortno}, \texttt{married}.
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Коэффициенты, значимые на уровне 1\% (по робастным стандартным ошибкам
+HC3)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
-\textbf{Коэффициенты, значимые на уровне 1\% (по робастным стандартным
-ошибкам HC3):} \texttt{mortno}.
+\texttt{mortno}
 
-\textbf{Расшифровка кодов статистической значимости (Signif. codes):}
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Расшифровка кодов статистической значимости (Signif. codes)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 В таблицах регрессионного анализа звездочками традиционно обозначается
 \(p\)-значение (p-value) для каждого коэффициента. Чем меньше
@@ -505,6 +558,8 @@ self & -0.036 & 0.025 & -1.464 & 0.143 & \\
   \emph{статистически не значимо}. У нас нет достаточных оснований
   утверждать, что переменная оказывает влияние на результат.
 \end{itemize}
+
+\end{tcolorbox}
 
 \subsection{approve equation \#2}\label{approve-equation-2-1}
 
@@ -544,16 +599,17 @@ self & -0.04 \\
 
 Ответ:
 
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Критическое значение}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
 \(t_{crit} = 2.578\)
+
+\end{tcolorbox}
 
 \textbf{Укажите результаты робастного и неробастного \(t\)-теста. Ответ
 округлите до 3-х десятичных знаков.}
 
-Результаты \(t\)-теста для коэффициентов (неробастные стандартные
-ошибки, s.e.)
-
-\subsubsection{t test of coefficients (OLS Standard
-Errors)}\label{t-test-of-coefficients-ols-standard-errors-1}
+\textbf{Результаты \(t\)-теста для коэффициентов (неробастные
+стандартные ошибки, s.e.)}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -596,11 +652,17 @@ self & -0.04 & 0.023 & -1.786 & 0.074 & * \\
 \emph{Signif. codes:} \texttt{***} \(p<0.01\), \texttt{**} \(p<0.05\),
 \texttt{*} \(p<0.1\)
 
-Результаты \(t\)-теста для коэффициентов (робастные стандартные ошибки,
-s.e.)
+Какие коэффициенты значимы?
 
-\subsubsection{t test of coefficients (Robust Standard Errors:
-HC3)}\label{t-test-of-coefficients-robust-standard-errors-hc3-1}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Коэффициенты, значимые на уровне 1\% (по классическим стандартным
+ошибкам)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\texttt{I(appinc\ **\ 2)}, \texttt{mortno}
+
+\end{tcolorbox}
+
+\textbf{Результаты \(t\)-теста для коэффициентов (робастные стандартные
+ошибки, HC3-s.e.): }
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -645,11 +707,12 @@ self & -0.04 & 0.025 & -1.602 & 0.109 & \\
 
 Какие коэффициенты значимы?
 
-\textbf{Коэффициенты, значимые на уровне 1\% (по классическим
-стандартным ошибкам):} \texttt{I(appinc\ **\ 2)}, \texttt{mortno}.
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Коэффициенты, значимые на уровне 1\% (по робастным стандартным ошибкам
+HC3)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
-\textbf{Коэффициенты, значимые на уровне 1\% (по робастным стандартным
-ошибкам HC3):} \texttt{mortno}.
+\texttt{mortno}
+
+\end{tcolorbox}
 
 \subsection{labour force equation \#1}\label{labour-force-equation-1-1}
 
@@ -688,16 +751,17 @@ np.log(FAMINC) & 0.072 \\
 
 Ответ:
 
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Критическое значение}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
 \(t_{crit} = 2.582\)
+
+\end{tcolorbox}
 
 \textbf{Укажите результаты робастного и неробастного \(t\)-теста. Ответ
 округлите до 3-х десятичных знаков.}
 
-Результаты \(t\)-теста для коэффициентов (неробастные стандартные
-ошибки, s.e.)
-
-\subsubsection{t test of coefficients (OLS Standard
-Errors)}\label{t-test-of-coefficients-ols-standard-errors-2}
+\textbf{Результаты \(t\)-теста для коэффициентов (неробастные
+стандартные ошибки, s.e.)}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -739,11 +803,17 @@ np.log(FAMINC) & 0.072 & 0.037 & 1.965 & 0.05 & ** \\
 \emph{Signif. codes:} \texttt{***} \(p<0.01\), \texttt{**} \(p<0.05\),
 \texttt{*} \(p<0.1\)
 
-Результаты \(t\)-теста для коэффициентов (робастные стандартные ошибки,
-s.e.)
+Какие коэффициенты значимы?
 
-\subsubsection{t test of coefficients (Robust Standard Errors:
-HC3)}\label{t-test-of-coefficients-robust-standard-errors-hc3-2}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Коэффициенты, значимые на уровне 1\% (по классическим стандартным
+ошибкам)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\texttt{WE}, \texttt{KL6}
+
+\end{tcolorbox}
+
+\textbf{Результаты \(t\)-теста для коэффициентов (робастные стандартные
+ошибки, HC3-s.e.): }
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -787,11 +857,12 @@ np.log(FAMINC) & 0.072 & 0.038 & 1.921 & 0.055 & * \\
 
 Какие коэффициенты значимы?
 
-\textbf{Коэффициенты, значимые на уровне 1\% (по классическим
-стандартным ошибкам):} \texttt{WE}, \texttt{KL6}.
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Коэффициенты, значимые на уровне 1\% (по робастным стандартным ошибкам
+HC3)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
-\textbf{Коэффициенты, значимые на уровне 1\% (по робастным стандартным
-ошибкам HC3):} \texttt{WE}, \texttt{KL6}.
+\texttt{WE}, \texttt{KL6}
+
+\end{tcolorbox}
 
 \subsection{labour force equation \#2}\label{labour-force-equation-2-1}
 
@@ -825,18 +896,17 @@ np.log(FAMINC) & 0.094 \\
 Вычислите критическое значения для \(t\)-теста. \textbf{Ответ округлите
 до 3-х десятичных знаков.}
 
-Ответ:
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Критическое значение}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 \(t_{crit} = 1.963\)
+
+\end{tcolorbox}
 
 \textbf{Укажите результаты робастного и неробастного \(t\)-теста. Ответ
 округлите до 3-х десятичных знаков.}
 
-Результаты \(t\)-теста для коэффициентов (неробастные стандартные
-ошибки, s.e.)
-
-\subsubsection{t test of coefficients (OLS Standard
-Errors)}\label{t-test-of-coefficients-ols-standard-errors-3}
+\textbf{Результаты \(t\)-теста для коэффициентов (неробастные
+стандартные ошибки, s.e.)}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -875,11 +945,17 @@ np.log(FAMINC) & 0.094 & 0.038 & 2.449 & 0.015 & ** \\
 \emph{Signif. codes:} \texttt{***} \(p<0.01\), \texttt{**} \(p<0.05\),
 \texttt{*} \(p<0.1\)
 
-Результаты \(t\)-теста для коэффициентов (робастные стандартные ошибки,
-s.e.)
+Какие коэффициенты значимы?
 
-\subsubsection{t test of coefficients (Robust Standard Errors:
-HC3)}\label{t-test-of-coefficients-robust-standard-errors-hc3-3}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Коэффициенты, значимые на уровне 5\% (по классическим стандартным
+ошибкам)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\texttt{WE}, \texttt{np.log(FAMINC)}
+
+\end{tcolorbox}
+
+\textbf{Результаты \(t\)-теста для коэффициентов (робастные стандартные
+ошибки, HC3-s.e.): }
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -920,11 +996,12 @@ np.log(FAMINC) & 0.094 & 0.04 & 2.351 & 0.019 & ** \\
 
 Какие коэффициенты значимы?
 
-\textbf{Коэффициенты, значимые на уровне 5\% (по классическим
-стандартным ошибкам):} \texttt{WE}, \texttt{np.log(FAMINC)}.
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Коэффициенты, значимые на уровне 5\% (по робастным стандартным ошибкам
+HC3)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
-\textbf{Коэффициенты, значимые на уровне 5\% (по робастным стандартным
-ошибкам HC3):} \texttt{WE}, \texttt{np.log(FAMINC)}.
+\texttt{WE}, \texttt{np.log(FAMINC)}
+
+\end{tcolorbox}
 
 \section{F-тест: значимость
 регрессии}\label{f-ux442ux435ux441ux442-ux437ux43dux430ux447ux438ux43cux43eux441ux442ux44c-ux440ux435ux433ux440ux435ux441ux441ux438ux438}

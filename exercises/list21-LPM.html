@@ -92,26 +92,10 @@ window.Quarto = {
   </ul></li>
   <li><a href="#t-тест" id="toc-t-тест" class="nav-link" data-scroll-target="#t-тест"><span class="header-section-number">2</span> t-тест</a>
   <ul class="collapse">
-  <li><a href="#approve-equation-1-1" id="toc-approve-equation-1-1" class="nav-link" data-scroll-target="#approve-equation-1-1"><span class="header-section-number">2.1</span> approve equation #1</a>
-  <ul class="collapse">
-  <li><a href="#t-test-of-coefficients-ols-standard-errors" id="toc-t-test-of-coefficients-ols-standard-errors" class="nav-link" data-scroll-target="#t-test-of-coefficients-ols-standard-errors"><span class="header-section-number">2.1.1</span> t test of coefficients (OLS Standard Errors)</a></li>
-  <li><a href="#t-test-of-coefficients-robust-standard-errors-hc3" id="toc-t-test-of-coefficients-robust-standard-errors-hc3" class="nav-link" data-scroll-target="#t-test-of-coefficients-robust-standard-errors-hc3"><span class="header-section-number">2.1.2</span> t test of coefficients (Robust Standard Errors: HC3)</a></li>
-  </ul></li>
-  <li><a href="#approve-equation-2-1" id="toc-approve-equation-2-1" class="nav-link" data-scroll-target="#approve-equation-2-1"><span class="header-section-number">2.2</span> approve equation #2</a>
-  <ul class="collapse">
-  <li><a href="#t-test-of-coefficients-ols-standard-errors-1" id="toc-t-test-of-coefficients-ols-standard-errors-1" class="nav-link" data-scroll-target="#t-test-of-coefficients-ols-standard-errors-1"><span class="header-section-number">2.2.1</span> t test of coefficients (OLS Standard Errors)</a></li>
-  <li><a href="#t-test-of-coefficients-robust-standard-errors-hc3-1" id="toc-t-test-of-coefficients-robust-standard-errors-hc3-1" class="nav-link" data-scroll-target="#t-test-of-coefficients-robust-standard-errors-hc3-1"><span class="header-section-number">2.2.2</span> t test of coefficients (Robust Standard Errors: HC3)</a></li>
-  </ul></li>
-  <li><a href="#labour-force-equation-1-1" id="toc-labour-force-equation-1-1" class="nav-link" data-scroll-target="#labour-force-equation-1-1"><span class="header-section-number">2.3</span> labour force equation #1</a>
-  <ul class="collapse">
-  <li><a href="#t-test-of-coefficients-ols-standard-errors-2" id="toc-t-test-of-coefficients-ols-standard-errors-2" class="nav-link" data-scroll-target="#t-test-of-coefficients-ols-standard-errors-2"><span class="header-section-number">2.3.1</span> t test of coefficients (OLS Standard Errors)</a></li>
-  <li><a href="#t-test-of-coefficients-robust-standard-errors-hc3-2" id="toc-t-test-of-coefficients-robust-standard-errors-hc3-2" class="nav-link" data-scroll-target="#t-test-of-coefficients-robust-standard-errors-hc3-2"><span class="header-section-number">2.3.2</span> t test of coefficients (Robust Standard Errors: HC3)</a></li>
-  </ul></li>
-  <li><a href="#labour-force-equation-2-1" id="toc-labour-force-equation-2-1" class="nav-link" data-scroll-target="#labour-force-equation-2-1"><span class="header-section-number">2.4</span> labour force equation #2</a>
-  <ul class="collapse">
-  <li><a href="#t-test-of-coefficients-ols-standard-errors-3" id="toc-t-test-of-coefficients-ols-standard-errors-3" class="nav-link" data-scroll-target="#t-test-of-coefficients-ols-standard-errors-3"><span class="header-section-number">2.4.1</span> t test of coefficients (OLS Standard Errors)</a></li>
-  <li><a href="#t-test-of-coefficients-robust-standard-errors-hc3-3" id="toc-t-test-of-coefficients-robust-standard-errors-hc3-3" class="nav-link" data-scroll-target="#t-test-of-coefficients-robust-standard-errors-hc3-3"><span class="header-section-number">2.4.2</span> t test of coefficients (Robust Standard Errors: HC3)</a></li>
-  </ul></li>
+  <li><a href="#approve-equation-1-1" id="toc-approve-equation-1-1" class="nav-link" data-scroll-target="#approve-equation-1-1"><span class="header-section-number">2.1</span> approve equation #1</a></li>
+  <li><a href="#approve-equation-2-1" id="toc-approve-equation-2-1" class="nav-link" data-scroll-target="#approve-equation-2-1"><span class="header-section-number">2.2</span> approve equation #2</a></li>
+  <li><a href="#labour-force-equation-1-1" id="toc-labour-force-equation-1-1" class="nav-link" data-scroll-target="#labour-force-equation-1-1"><span class="header-section-number">2.3</span> labour force equation #1</a></li>
+  <li><a href="#labour-force-equation-2-1" id="toc-labour-force-equation-2-1" class="nav-link" data-scroll-target="#labour-force-equation-2-1"><span class="header-section-number">2.4</span> labour force equation #2</a></li>
   </ul></li>
   <li><a href="#f-тест-значимость-регрессии" id="toc-f-тест-значимость-регрессии" class="nav-link" data-scroll-target="#f-тест-значимость-регрессии"><span class="header-section-number">3</span> F-тест: значимость регрессии</a>
   <ul class="collapse">
@@ -237,10 +221,23 @@ P(approve=1)=\beta_0+\beta_1mortno+\beta_2unem+\beta_3dep+\beta_4male+\beta_5mar
 </tr>
 </tbody>
 </table>
+<p><strong>Дайте интерпретацию коэффициентам модели.</strong></p>
 </section>
 <section id="approve-equation-2" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="approve-equation-2"><span class="header-section-number">1.2</span> approve equation #2</h2>
 <p>Для датасета <code>loanapp</code> рассмотрим регрессию <strong>approve на appinc, I(appinc ** 2), mortno, unem, dep, male, married, yjob, self</strong></p>
+<p>Спецификация:</p>
+<p><span class="math display">\[
+\begin{equation}
+approve=\beta_0 + \beta_1 appinc + \beta_2 appinc^{2} + \beta_3 mortno+\beta_4 unem + \beta_5 dep + \beta_6 male + \beta_7 married + \beta_8 yjob + \beta_9 self + u
+\end{equation}
+\]</span></p>
+<p>Альтернативная спецификация:</p>
+<p><span class="math display">\[
+\begin{equation}
+P(approve=1)=\beta_0 + \beta_1 appinc + \beta_2 appinc^{2} + \beta_3 mortno+\beta_4 unem + \beta_5 dep + \beta_6 male + \beta_7 married + \beta_8 yjob + \beta_9 self
+\end{equation}
+\]</span></p>
 <p>Оцените модель на данных и укажите коэффициенты подогнанной модели. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
 <p>Ответ:</p>
 <table class="caption-top table">
@@ -304,10 +301,11 @@ P(approve=1)=\beta_0+\beta_1mortno+\beta_2unem+\beta_3dep+\beta_4male+\beta_5mar
 </tr>
 </tbody>
 </table>
+<p><strong>Дайте интерпретацию коэффициентам модели.</strong></p>
 </section>
 <section id="labour-force-equation-1" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="labour-force-equation-1"><span class="header-section-number">1.3</span> labour force equation #1</h2>
-<p>Для датасета <code>TableF5-1</code> рассмотрим регрессию <strong>LFP на WA, I(WA ** 2), WE, KL6, K618, CIT, UN, log(FAMINC)</strong></p>
+<p>Для датасета <code>TableF5-1</code> рассмотрим регрессию <strong>LFP на WA, I(WA ** 2), WE, KL6, K618, CIT, UN, np.log(FAMINC)</strong></p>
 <p>Спецификация:</p>
 <p><span class="math display">\[
 \begin{equation}
@@ -378,10 +376,23 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </tr>
 </tbody>
 </table>
+<p><strong>Дайте интерпретацию коэффициентам модели.</strong></p>
 </section>
 <section id="labour-force-equation-2" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="labour-force-equation-2"><span class="header-section-number">1.4</span> labour force equation #2</h2>
-<p>Для датасета <code>TableF5-1</code> рассмотрим регрессию <strong>LFP на WA, WE, CIT, UN, log(FAMINC)</strong></p>
+<p>Для датасета <code>TableF5-1</code> рассмотрим регрессию <strong>LFP на WA, WE, CIT, UN, np.log(FAMINC)</strong></p>
+<p>Спецификация:</p>
+<p><span class="math display">\[
+\begin{equation}
+LFP = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5 UN + \beta_6 \log(FAMINC)+u
+\end{equation}
+\]</span></p>
+<p>Альтернативная спецификация:</p>
+<p><span class="math display">\[
+\begin{equation}
+P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5 UN + \beta_6 \log(FAMINC)
+\end{equation}
+\]</span></p>
 <p>Оцените модель на данных и укажите коэффициенты подогнанной модели. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
 <p>Ответ:</p>
 <table class="caption-top table">
@@ -425,11 +436,12 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </tr>
 </tbody>
 </table>
+<p><strong>Дайте интерпретацию коэффициентам модели.</strong></p>
 </section>
 <section id="замечание-почему-logfaminc" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="замечание-почему-logfaminc"><span class="header-section-number">1.5</span> Замечание: почему log(FAMINC)</h2>
 <p>Нарисуем гистограмму <span class="math inline">\(\textrm{FAMINC}\)</span> с наложенной кривой нормального распределения</p>
-<div id="cell-fig-faminc-dist" class="cell" data-execution_count="6">
+<div id="cell-fig-faminc-dist" class="cell" data-execution_count="2086">
 <div class="cell-output cell-output-display">
 <div id="fig-faminc-dist" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -444,7 +456,7 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </div>
 </div>
 <p>Нарисуем гистограмму <span class="math inline">\(\log(\textrm{FAMINC})\)</span> с наложенной кривой нормального распределения</p>
-<div id="cell-fig-log-faminc" class="cell" data-execution_count="7">
+<div id="cell-fig-log-faminc" class="cell" data-execution_count="2087">
 <div class="cell-output cell-output-display">
 <div id="fig-log-faminc" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -452,7 +464,7 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 <img src="list21-LPM_files/figure-html/fig-log-faminc-output-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-log-faminc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Рисунок&nbsp;2: Гистограмма логарифмированного дохода семьи (<span class="math inline">\(\log(\textrm{FAMINC})\)</span>) с наложением нормальной кривой плотности.
+Рисунок&nbsp;2: Гистограмма логарифмированного дохода семьи с наложением нормальной кривой плотности.
 </figcaption>
 </figure>
 </div>
@@ -511,12 +523,21 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </table>
 <p>Модель была подогнана по 1971 наблюдению. <span style="color: blue">Уровень значимости 1%</span></p>
 <p>Вычислите критическое значения для <span class="math inline">\(t\)</span>-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
-<p>Ответ:</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Критическое значение">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Критическое значение
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><span class="math inline">\(t_{crit} = 2.578\)</span></p>
+</div>
+</div>
 <p><strong>Укажите результаты робастного и неробастного <span class="math inline">\(t\)</span>-теста. Ответ округлите до 3-х десятичных знаков.</strong></p>
-<p>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (неробастные стандартные ошибки, s.e.)</p>
-<section id="t-test-of-coefficients-ols-standard-errors" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="t-test-of-coefficients-ols-standard-errors"><span class="header-section-number">2.1.1</span> t test of coefficients (OLS Standard Errors)</h3>
+<p><strong>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (неробастные стандартные ошибки, s.e.)</strong></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -596,10 +617,25 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </tbody>
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
-<p>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (робастные стандартные ошибки, s.e.)</p>
-</section>
-<section id="t-test-of-coefficients-robust-standard-errors-hc3" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="t-test-of-coefficients-robust-standard-errors-hc3"><span class="header-section-number">2.1.2</span> t test of coefficients (Robust Standard Errors: HC3)</h3>
+<p>Какие коэффициенты значимы?</p>
+<div id="cell-33" class="cell" data-execution_count="2095">
+<div class="cell-output cell-output-display cell-output-markdown">
+<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>mortno</code>, <code>married</code></p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (робастные стандартные ошибки, HC3-s.e.): </strong></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -680,17 +716,33 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div id="cell-31" class="cell" data-execution_count="15">
+<div id="cell-36" class="cell" data-execution_count="2096">
 <div class="cell-output cell-output-display cell-output-markdown">
-<p><strong>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам):</strong> <code>mortno</code>, <code>married</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)
 </div>
 </div>
-<div id="cell-32" class="cell" data-execution_count="16">
-<div class="cell-output cell-output-display cell-output-markdown">
-<p><strong>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3):</strong> <code>mortno</code>.</p>
+<div class="callout-body-container callout-body">
+<p><code>mortno</code></p>
 </div>
 </div>
-<p><strong>Расшифровка кодов статистической значимости (Signif. codes):</strong></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Уведомление</span>Расшифровка кодов статистической значимости (Signif. codes)
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>В таблицах регрессионного анализа звездочками традиционно обозначается <span class="math inline">\(p\)</span>-значение (p-value) для каждого коэффициента. Чем меньше <span class="math inline">\(p\)</span>-значение, тем сильнее статистические доказательства против нулевой гипотезы (<span class="math inline">\(H_0\)</span>), согласно которой данный фактор не влияет на зависимую переменную (истинный коэффициент равен нулю).</p>
 <ul>
 <li><code>***</code> : <strong><span class="math inline">\(p &lt; 0.01\)</span></strong> (от 0 до 0.01) — <em>высокая значимость</em>. Нулевая гипотеза отвергается на уровне значимости 1%.</li>
@@ -698,7 +750,8 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 <li><code>*</code> : <strong><span class="math inline">\(0.05 \le p &lt; 0.1\)</span></strong> — <em>маргинальная (слабая) значимость</em>. Коэффициент значим лишь на 10% уровне. В строгих моделях предиктор признают незначимым, но иногда интерпретируют как «статистическую тенденцию».</li>
 <li><code></code> (пустое место) : <strong><span class="math inline">\(p \ge 0.1\)</span></strong> (от 0.1 до 1) — <em>статистически не значимо</em>. У нас нет достаточных оснований утверждать, что переменная оказывает влияние на результат.</li>
 </ul>
-</section>
+</div>
+</div>
 </section>
 <section id="approve-equation-2-1" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="approve-equation-2-1"><span class="header-section-number">2.2</span> approve equation #2</h2>
@@ -758,11 +811,21 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 <p>Модель была подогнана по 1971 наблюдению. <span style="color: blue">Уровень значимости 1%</span></p>
 <p>Вычислите критическое значения для <span class="math inline">\(t\)</span>-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
 <p>Ответ:</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Критическое значение">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Критическое значение
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><span class="math inline">\(t_{crit} = 2.578\)</span></p>
+</div>
+</div>
 <p><strong>Укажите результаты робастного и неробастного <span class="math inline">\(t\)</span>-теста. Ответ округлите до 3-х десятичных знаков.</strong></p>
-<p>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (неробастные стандартные ошибки, s.e.)</p>
-<section id="t-test-of-coefficients-ols-standard-errors-1" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="t-test-of-coefficients-ols-standard-errors-1"><span class="header-section-number">2.2.1</span> t test of coefficients (OLS Standard Errors)</h3>
+<p><strong>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (неробастные стандартные ошибки, s.e.)</strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 22%">
@@ -866,10 +929,21 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </tbody>
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
-<p>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (робастные стандартные ошибки, s.e.)</p>
-</section>
-<section id="t-test-of-coefficients-robust-standard-errors-hc3-1" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="t-test-of-coefficients-robust-standard-errors-hc3-1"><span class="header-section-number">2.2.2</span> t test of coefficients (Robust Standard Errors: HC3)</h3>
+<p>Какие коэффициенты значимы?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>I(appinc ** 2)</code>, <code>mortno</code></p>
+</div>
+</div>
+<p><strong>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (робастные стандартные ошибки, HC3-s.e.): </strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 22%">
@@ -974,17 +1048,19 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div id="cell-45" class="cell" data-execution_count="22">
-<div class="cell-output cell-output-display cell-output-markdown">
-<p><strong>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам):</strong> <code>I(appinc ** 2)</code>, <code>mortno</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)
 </div>
 </div>
-<div id="cell-46" class="cell" data-execution_count="23">
-<div class="cell-output cell-output-display cell-output-markdown">
-<p><strong>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3):</strong> <code>mortno</code>.</p>
+<div class="callout-body-container callout-body">
+<p><code>mortno</code></p>
 </div>
 </div>
-</section>
 </section>
 <section id="labour-force-equation-1-1" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="labour-force-equation-1-1"><span class="header-section-number">2.3</span> labour force equation #1</h2>
@@ -1040,11 +1116,21 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 <p>Модель была подогнана по 753 наблюдению. <span style="color: blue">Уровень значимости 1%</span></p>
 <p>Вычислите критическое значения для <span class="math inline">\(t\)</span>-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
 <p>Ответ:</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Критическое значение">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Критическое значение
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><span class="math inline">\(t_{crit} = 2.582\)</span></p>
+</div>
+</div>
 <p><strong>Укажите результаты робастного и неробастного <span class="math inline">\(t\)</span>-теста. Ответ округлите до 3-х десятичных знаков.</strong></p>
-<p>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (неробастные стандартные ошибки, s.e.)</p>
-<section id="t-test-of-coefficients-ols-standard-errors-2" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="t-test-of-coefficients-ols-standard-errors-2"><span class="header-section-number">2.3.1</span> t test of coefficients (OLS Standard Errors)</h3>
+<p><strong>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (неробастные стандартные ошибки, s.e.)</strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 22%">
@@ -1140,10 +1226,21 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </tbody>
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
-<p>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (робастные стандартные ошибки, s.e.)</p>
-</section>
-<section id="t-test-of-coefficients-robust-standard-errors-hc3-2" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="t-test-of-coefficients-robust-standard-errors-hc3-2"><span class="header-section-number">2.3.2</span> t test of coefficients (Robust Standard Errors: HC3)</h3>
+<p>Какие коэффициенты значимы?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>WE</code>, <code>KL6</code></p>
+</div>
+</div>
+<p><strong>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (робастные стандартные ошибки, HC3-s.e.): </strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 22%">
@@ -1240,17 +1337,19 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div id="cell-58" class="cell" data-execution_count="29">
-<div class="cell-output cell-output-display cell-output-markdown">
-<p><strong>Коэффициенты, значимые на уровне 1% (по классическим стандартным ошибкам):</strong> <code>WE</code>, <code>KL6</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3)
 </div>
 </div>
-<div id="cell-59" class="cell" data-execution_count="30">
-<div class="cell-output cell-output-display cell-output-markdown">
-<p><strong>Коэффициенты, значимые на уровне 1% (по робастным стандартным ошибкам HC3):</strong> <code>WE</code>, <code>KL6</code>.</p>
+<div class="callout-body-container callout-body">
+<p><code>WE</code>, <code>KL6</code></p>
 </div>
 </div>
-</section>
 </section>
 <section id="labour-force-equation-2-1" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="labour-force-equation-2-1"><span class="header-section-number">2.4</span> labour force equation #2</h2>
@@ -1293,12 +1392,21 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </table>
 <p>Модель была подогнана по 753 наблюдению. <span style="color: blue">Уровень значимости 5%</span></p>
 <p>Вычислите критическое значения для <span class="math inline">\(t\)</span>-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
-<p>Ответ:</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Критическое значение">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Критическое значение
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><span class="math inline">\(t_{crit} = 1.963\)</span></p>
+</div>
+</div>
 <p><strong>Укажите результаты робастного и неробастного <span class="math inline">\(t\)</span>-теста. Ответ округлите до 3-х десятичных знаков.</strong></p>
-<p>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (неробастные стандартные ошибки, s.e.)</p>
-<section id="t-test-of-coefficients-ols-standard-errors-3" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="t-test-of-coefficients-ols-standard-errors-3"><span class="header-section-number">2.4.1</span> t test of coefficients (OLS Standard Errors)</h3>
+<p><strong>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (неробастные стандартные ошибки, s.e.)</strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 22%">
@@ -1370,10 +1478,21 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </tbody>
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
-<p>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (робастные стандартные ошибки, s.e.)</p>
-</section>
-<section id="t-test-of-coefficients-robust-standard-errors-hc3-3" class="level3" data-number="2.4.2">
-<h3 data-number="2.4.2" class="anchored" data-anchor-id="t-test-of-coefficients-robust-standard-errors-hc3-3"><span class="header-section-number">2.4.2</span> t test of coefficients (Robust Standard Errors: HC3)</h3>
+<p>Какие коэффициенты значимы?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 5% (по классическим стандартным ошибкам)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 5% (по классическим стандартным ошибкам)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>WE</code>, <code>np.log(FAMINC)</code></p>
+</div>
+</div>
+<p><strong>Результаты <span class="math inline">\(t\)</span>-теста для коэффициентов (робастные стандартные ошибки, HC3-s.e.): </strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 22%">
@@ -1446,17 +1565,19 @@ P(LFP=1)=\beta_0+\beta_1WA+\beta_2WA^2+\beta_3WE+\beta_4KL6+\beta_5K618+\beta_6C
 </table>
 <p><em>Signif. codes:</em> <code>***</code> <span class="math inline">\(p&lt;0.01\)</span>, <code>**</code> <span class="math inline">\(p&lt;0.05\)</span>, <code>*</code> <span class="math inline">\(p&lt;0.1\)</span></p>
 <p>Какие коэффициенты значимы?</p>
-<div id="cell-71" class="cell" data-execution_count="36">
-<div class="cell-output cell-output-display cell-output-markdown">
-<p><strong>Коэффициенты, значимые на уровне 5% (по классическим стандартным ошибкам):</strong> <code>WE</code>, <code>np.log(FAMINC)</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Коэффициенты, значимые на уровне 5% (по робастным стандартным ошибкам HC3)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Коэффициенты, значимые на уровне 5% (по робастным стандартным ошибкам HC3)
 </div>
 </div>
-<div id="cell-72" class="cell" data-execution_count="37">
-<div class="cell-output cell-output-display cell-output-markdown">
-<p><strong>Коэффициенты, значимые на уровне 5% (по робастным стандартным ошибкам HC3):</strong> <code>WE</code>, <code>np.log(FAMINC)</code>.</p>
+<div class="callout-body-container callout-body">
+<p><code>WE</code>, <code>np.log(FAMINC)</code></p>
 </div>
 </div>
-</section>
 </section>
 </section>
 <section id="f-тест-значимость-регрессии" class="level1" data-number="3">
