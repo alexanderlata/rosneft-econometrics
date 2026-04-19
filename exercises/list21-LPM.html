@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,7 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="list21-LPM_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="list21-LPM_files/libs/quarto-html/anchor.min.js"></script>
 <link href="list21-LPM_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="list21-LPM_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="list21-LPM_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="list21-LPM_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="list21-LPM_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="list21-LPM_files/libs/bootstrap/bootstrap-a2046bf33c0e91bfd1bc590162318d9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -107,8 +107,8 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#approve-equation-1-3" id="toc-approve-equation-1-3" class="nav-link" data-scroll-target="#approve-equation-1-3"><span class="header-section-number">4.1</span> approve equation #1</a>
   <ul class="collapse">
-  <li><a href="#гипотеза-h₀-beta_appinc-beta_appinc2-0-α0.05" id="toc-гипотеза-h₀-beta_appinc-beta_appinc2-0-α0.05" class="nav-link" data-scroll-target="#гипотеза-h₀-beta_appinc-beta_appinc2-0-α0.05"><span class="header-section-number">4.1.1</span> Гипотеза H₀: <span class="math inline">\(\beta_{appinc} = \beta_{appinc^2} = 0\)</span> (α=0.05)</a></li>
-  <li><a href="#гипотеза-h₀-beta_unem-beta_dep-beta_married-0-α0.01" id="toc-гипотеза-h₀-beta_unem-beta_dep-beta_married-0-α0.01" class="nav-link" data-scroll-target="#гипотеза-h₀-beta_unem-beta_dep-beta_married-0-α0.01"><span class="header-section-number">4.1.2</span> Гипотеза H₀: <span class="math inline">\(\beta_{unem} = \beta_{dep} = \beta_{married} = 0\)</span> (α=0.01)</a></li>
+  <li><a href="#гипотеза-1-значимость-влияния-дохода" id="toc-гипотеза-1-значимость-влияния-дохода" class="nav-link" data-scroll-target="#гипотеза-1-значимость-влияния-дохода"><span class="header-section-number">4.1.1</span> Гипотеза 1: значимость влияния дохода</a></li>
+  <li><a href="#гипотеза-2-совместная-значимость-unem-dep-married" id="toc-гипотеза-2-совместная-значимость-unem-dep-married" class="nav-link" data-scroll-target="#гипотеза-2-совместная-значимость-unem-dep-married"><span class="header-section-number">4.1.2</span> Гипотеза 2: совместная значимость unem, dep, married</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#прогноз" id="toc-прогноз" class="nav-link" data-scroll-target="#прогноз"><span class="header-section-number">5</span> Прогноз</a>
@@ -118,8 +118,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#вопросы-адекватности-модели" id="toc-вопросы-адекватности-модели" class="nav-link" data-scroll-target="#вопросы-адекватности-модели"><span class="header-section-number">6</span> Вопросы адекватности модели</a>
   <ul class="collapse">
-  <li><a href="#approve-equation-график-фактических-и-прогнозируемых-значений" id="toc-approve-equation-график-фактических-и-прогнозируемых-значений" class="nav-link" data-scroll-target="#approve-equation-график-фактических-и-прогнозируемых-значений"><span class="header-section-number">6.1</span> approve equation — график фактических и прогнозируемых значений</a></li>
-  <li><a href="#labour-force-equation-график-фактических-и-прогнозируемых-значений" id="toc-labour-force-equation-график-фактических-и-прогнозируемых-значений" class="nav-link" data-scroll-target="#labour-force-equation-график-фактических-и-прогнозируемых-значений"><span class="header-section-number">6.2</span> labour force equation — график фактических и прогнозируемых значений</a></li>
+  <li><a href="#approve-equation-4" id="toc-approve-equation-4" class="nav-link" data-scroll-target="#approve-equation-4"><span class="header-section-number">6.1</span> approve equation</a></li>
+  <li><a href="#labour-force-equation-3" id="toc-labour-force-equation-3" class="nav-link" data-scroll-target="#labour-force-equation-3"><span class="header-section-number">6.2</span> labour force equation</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Другие форматы</h2><ul><li><a href="list21-LPM.md"><i class="bi bi-file-code"></i>Github (GFM)</a></li><li><a href="list21-LPM.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -1586,35 +1586,442 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 <h2 data-number="3.1" class="anchored" data-anchor-id="approve-equation-1-2"><span class="header-section-number">3.1</span> approve equation #1</h2>
 <p>Для датасета <code>loanapp</code> рассмотрим регрессию <strong>approve на unem, male, yjob, self</strong></p>
 <p>Результаты оценивания:</p>
-<ul>
-<li><strong>F-stat (OLS):</strong> 2.029, p-value: 0.088</li>
-<li><strong>F-stat (Robust HC3):</strong> 1.677, p-value: 0.153</li>
-<li><strong>F_{crit}</strong> (α=0.1) = 1.948</li>
-</ul>
-<p><strong>Вывод:</strong> Регрессия <strong>незначима</strong> на уровне α=0.10</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">approve (OLS)</th>
+<th style="text-align: left;">approve (HC3)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">unem</td>
+<td style="text-align: left;">-0.007**</td>
+<td style="text-align: left;">-0.007*</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.003)</td>
+<td style="text-align: left;">(0.004)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">male</td>
+<td style="text-align: left;">0.021</td>
+<td style="text-align: left;">0.021</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.019)</td>
+<td style="text-align: left;">(0.020)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">yjob</td>
+<td style="text-align: left;">0.001</td>
+<td style="text-align: left;">0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.007)</td>
+<td style="text-align: left;">(0.006)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">self</td>
+<td style="text-align: left;">-0.030</td>
+<td style="text-align: left;">-0.030</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.022)</td>
+<td style="text-align: left;">(0.025)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Intercept</td>
+<td style="text-align: left;">0.891***</td>
+<td style="text-align: left;">0.891***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.021)</td>
+<td style="text-align: left;">(0.023)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R-squared</td>
+<td style="text-align: left;">0.004</td>
+<td style="text-align: left;">0.004</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R-squared Adj.</td>
+<td style="text-align: left;">0.002</td>
+<td style="text-align: left;">0.002</td>
+</tr>
+</tbody>
+</table>
+<p><em>Signif. codes:</em> *** <span class="math inline">\(p&lt;0.01\)</span>, ** <span class="math inline">\(p&lt;0.05\)</span>, * <span class="math inline">\(p&lt;0.1\)</span></p>
+<p><span style="color: blue">Зафиксируем уровень значимости 10%.</span></p>
 <p>Тестируется значимость регрессии, т.е. гипотеза <span class="math inline">\(H_0:\beta_{unem}=\beta_{male}=\beta_{yjob}=\beta_{self}=0\)</span>.</p>
+<p>Вычислите критическое значение для гипотезы. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Критическое значение">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Уведомление</span>Критическое значение
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(F_{crit} = 1.948\)</span></p>
+</div>
+</div>
+<p>Получите результаты неробастного F-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">F-statistic</th>
+<th style="text-align: right;">Prob(F-statistic)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2.011</td>
+<td style="text-align: right;">0.09</td>
+</tr>
+</tbody>
+</table>
+<p>Какой можно сделать вывод?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Вывод">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Вывод
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Регрессия <strong>значима</strong>.</p>
+</div>
+</div>
+<p>Получите результаты робастного F-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">F-statistic</th>
+<th style="text-align: right;">Prob(F-statistic)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1.667</td>
+<td style="text-align: right;">0.155</td>
+</tr>
+</tbody>
+</table>
+<p>Какой можно сделать вывод?</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Вывод">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Важное уведомление</span>Вывод
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Регрессия <strong>незначима</strong>.</p>
+</div>
+</div>
 </section>
 <section id="approve-equation-2-2" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="approve-equation-2-2"><span class="header-section-number">3.2</span> approve equation #2</h2>
 <p>Для датасета <code>loanapp</code> рассмотрим регрессию <strong>approve на appinc, I(appinc ** 2), mortno, dep</strong></p>
-<ul>
-<li><strong>F-stat (OLS):</strong> 9.106, p-value: 0.000</li>
-<li><strong>F-stat (Robust HC3):</strong> 8.188, p-value: 0.000</li>
-<li><strong>F_{crit}</strong> (α=0.05) = 2.376</li>
-</ul>
-<p><strong>Вывод:</strong> Регрессия <strong>значима</strong> на уровне α=0.05</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">OLS</th>
+<th style="text-align: left;">HC3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">unem</td>
+<td style="text-align: left;">-0.007**</td>
+<td style="text-align: left;">-0.007*</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.003)</td>
+<td style="text-align: left;">(0.004)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Intercept</td>
+<td style="text-align: left;">0.856***</td>
+<td style="text-align: left;">0.856***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.022)</td>
+<td style="text-align: left;">(0.023)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">appinc</td>
+<td style="text-align: left;">0.000**</td>
+<td style="text-align: left;">0.000**</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.000)</td>
+<td style="text-align: left;">(0.000)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I(appinc ** 2)</td>
+<td style="text-align: left;">-0.000***</td>
+<td style="text-align: left;">-0.000**</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.000)</td>
+<td style="text-align: left;">(0.000)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">mortno</td>
+<td style="text-align: left;">0.066***</td>
+<td style="text-align: left;">0.066***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.016)</td>
+<td style="text-align: left;">(0.015)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R-squared</td>
+<td style="text-align: left;">0.019</td>
+<td style="text-align: left;">0.019</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R-squared Adj.</td>
+<td style="text-align: left;">0.017</td>
+<td style="text-align: left;">0.017</td>
+</tr>
+</tbody>
+</table>
+<p><em>Signif. codes:</em> *** <span class="math inline">\(p&lt;0.01\)</span>, ** <span class="math inline">\(p&lt;0.05\)</span>, * <span class="math inline">\(p&lt;0.1\)</span></p>
+<p><span style="color: blue">Зафиксируем уровень значимости 5%.</span></p>
 <p>Тестируется значимость регрессии, т.е. гипотеза <span class="math inline">\(H_0:\beta_{appinc}=\beta_{appinc^2}=\beta_{mortno}=\beta_{dep}=0\)</span>.</p>
+<p>Вычислите критическое значение для гипотезы. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Критическое значение">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Уведомление</span>Критическое значение
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(F_{crit} = 2.376\)</span></p>
+</div>
+</div>
+<p>Получите результаты неробастного F-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">F-statistic</th>
+<th style="text-align: right;">Prob(F-statistic)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">9.606</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Какой можно сделать вывод?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Вывод">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Вывод
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Регрессия <strong>значима</strong>.</p>
+</div>
+</div>
+<p>Получите результаты робастного F-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">F-statistic</th>
+<th style="text-align: right;">Prob(F-statistic)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">9.13</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Какой можно сделать вывод?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Вывод">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Вывод
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Регрессия <strong>значима</strong>.</p>
+</div>
+</div>
 </section>
 <section id="approve-equation-3" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="approve-equation-3"><span class="header-section-number">3.3</span> approve equation #3</h2>
 <p>Для датасета <code>loanapp</code> рассмотрим регрессию <strong>approve на dep, male, married</strong></p>
-<ul>
-<li><strong>F-stat (OLS):</strong> 4.155, p-value: 0.006</li>
-<li><strong>F-stat (Robust HC3):</strong> 3.724, p-value: 0.011</li>
-<li><strong>F_{crit}</strong> (α=0.01) = 3.792</li>
-</ul>
-<p><strong>Вывод:</strong> Регрессия <strong>незначима</strong> на уровне α=0.01</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">OLS</th>
+<th style="text-align: left;">HC3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">dep</td>
+<td style="text-align: left;">-0.016**</td>
+<td style="text-align: left;">-0.016**</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.007)</td>
+<td style="text-align: left;">(0.008)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">male</td>
+<td style="text-align: left;">-0.002</td>
+<td style="text-align: left;">-0.002</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.020)</td>
+<td style="text-align: left;">(0.021)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">married</td>
+<td style="text-align: left;">0.057***</td>
+<td style="text-align: left;">0.057***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.018)</td>
+<td style="text-align: left;">(0.019)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Intercept</td>
+<td style="text-align: left;">0.852***</td>
+<td style="text-align: left;">0.852***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.018)</td>
+<td style="text-align: left;">(0.019)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R-squared</td>
+<td style="text-align: left;">0.006</td>
+<td style="text-align: left;">0.006</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R-squared Adj.</td>
+<td style="text-align: left;">0.005</td>
+<td style="text-align: left;">0.005</td>
+</tr>
+</tbody>
+</table>
+<p><em>Signif. codes:</em> *** <span class="math inline">\(p&lt;0.01\)</span>, ** <span class="math inline">\(p&lt;0.05\)</span>, * <span class="math inline">\(p&lt;0.1\)</span></p>
+<p><span style="color: blue">Зафиксируем уровень значимости 1%.</span></p>
 <p>Тестируется значимость регрессии, т.е. гипотеза <span class="math inline">\(H_0:\beta_{dep}=\beta_{male}=\beta_{married}=0\)</span>.</p>
+<p>Вычислите критическое значение для гипотезы. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Критическое значение">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Уведомление</span>Критическое значение
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(F_{crit} = 3.792\)</span></p>
+</div>
+</div>
+<p>Получите результаты неробастного F-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">F-statistic</th>
+<th style="text-align: right;">Prob(F-statistic)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">4.155</td>
+<td style="text-align: right;">0.006</td>
+</tr>
+</tbody>
+</table>
+<p>Какой можно сделать вывод?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Вывод">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Вывод
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Регрессия <strong>значима</strong>.</p>
+</div>
+</div>
+<p>Получите результаты робастного F-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">F-statistic</th>
+<th style="text-align: right;">Prob(F-statistic)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">3.724</td>
+<td style="text-align: right;">0.011</td>
+</tr>
+</tbody>
+</table>
+<p>Какой можно сделать вывод?</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Вывод">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Важное уведомление</span>Вывод
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Регрессия <strong>незначима</strong>.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="f-тест-совместная-значимость" class="level1" data-number="4">
@@ -1622,23 +2029,322 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 <section id="approve-equation-1-3" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="approve-equation-1-3"><span class="header-section-number">4.1</span> approve equation #1</h2>
 <p>Для датасета <code>loanapp</code> рассмотрим регрессию <strong>approve на appinc, I(appinc ** 2), mortno, unem, dep, male, married, yjob, self</strong></p>
-<section id="гипотеза-h₀-beta_appinc-beta_appinc2-0-α0.05" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="гипотеза-h₀-beta_appinc-beta_appinc2-0-α0.05"><span class="header-section-number">4.1.1</span> Гипотеза H₀: <span class="math inline">\(\beta_{appinc} = \beta_{appinc^2} = 0\)</span> (α=0.05)</h3>
-<ul>
-<li><strong>F-stat (OLS):</strong> 5.149, p-value: 0.006</li>
-<li><strong>F-stat (Robust HC3):</strong> 2.961, p-value: 0.052</li>
-<li><strong>F_{crit}</strong> (α=0.05) = 3.000</li>
-</ul>
-<p><strong>Вывод:</strong> Гипотеза <strong>не отвергается</strong> — доход незначим</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Model 1</th>
+<th style="text-align: left;">Model 2</th>
+<th style="text-align: left;">Model 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Dep. Variable</td>
+<td style="text-align: left;">approve</td>
+<td style="text-align: left;">approve</td>
+<td style="text-align: left;">approve</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">appinc</td>
+<td style="text-align: left;">0.001*</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">0.001**</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.000)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.000)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I(appinc ** 2)</td>
+<td style="text-align: left;">-0.000**</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">-0.000***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.000)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.000)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">mortno</td>
+<td style="text-align: left;">0.066***</td>
+<td style="text-align: left;">0.073***</td>
+<td style="text-align: left;">0.067***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.015)</td>
+<td style="text-align: left;">(0.015)</td>
+<td style="text-align: left;">(0.015)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">unem</td>
+<td style="text-align: left;">-0.006</td>
+<td style="text-align: left;">-0.006</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.004)</td>
+<td style="text-align: left;">(0.004)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">dep</td>
+<td style="text-align: left;">-0.017**</td>
+<td style="text-align: left;">-0.018**</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.007)</td>
+<td style="text-align: left;">(0.008)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">male</td>
+<td style="text-align: left;">-0.003</td>
+<td style="text-align: left;">0.002</td>
+<td style="text-align: left;">0.003</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.021)</td>
+<td style="text-align: left;">(0.021)</td>
+<td style="text-align: left;">(0.020)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">married</td>
+<td style="text-align: left;">0.043**</td>
+<td style="text-align: left;">0.046**</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.019)</td>
+<td style="text-align: left;">(0.019)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">yjob</td>
+<td style="text-align: left;">-0.001</td>
+<td style="text-align: left;">-0.001</td>
+<td style="text-align: left;">-0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.006)</td>
+<td style="text-align: left;">(0.006)</td>
+<td style="text-align: left;">(0.006)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">self</td>
+<td style="text-align: left;">-0.040</td>
+<td style="text-align: left;">-0.036</td>
+<td style="text-align: left;">-0.050**</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.025)</td>
+<td style="text-align: left;">(0.025)</td>
+<td style="text-align: left;">(0.024)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Intercept</td>
+<td style="text-align: left;">0.842***</td>
+<td style="text-align: left;">0.864***</td>
+<td style="text-align: left;">0.824***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.027)</td>
+<td style="text-align: left;">(0.023)</td>
+<td style="text-align: left;">(0.023)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R-squared</td>
+<td style="text-align: left;">0.025</td>
+<td style="text-align: left;">0.020</td>
+<td style="text-align: left;">0.019</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R-squared Adj.</td>
+<td style="text-align: left;">0.021</td>
+<td style="text-align: left;">0.017</td>
+<td style="text-align: left;">0.016</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F-statistic</td>
+<td style="text-align: left;">5.032</td>
+<td style="text-align: left;">5.849</td>
+<td style="text-align: left;">6.172</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nobs</td>
+<td style="text-align: left;">1971</td>
+<td style="text-align: left;">1971</td>
+<td style="text-align: left;">1971</td>
+</tr>
+</tbody>
+</table>
+<p><em>Signif. codes:</em> *** <span class="math inline">\(p&lt;0.01\)</span>, ** <span class="math inline">\(p&lt;0.05\)</span>, * <span class="math inline">\(p&lt;0.1\)</span></p>
+<section id="гипотеза-1-значимость-влияния-дохода" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="гипотеза-1-значимость-влияния-дохода"><span class="header-section-number">4.1.1</span> Гипотеза 1: значимость влияния дохода</h3>
+<p>Тестируется значимость влияния дохода, т.е. гипотеза <span class="math inline">\(H_0:\beta_{appinc}=\beta_{appinc^2}=0\)</span>.</p>
+<p><span style="color: blue">Зафиксируем уровень значимости 5%.</span></p>
+<p>Вычислите критическое значение для гипотезы. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Критическое значение">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Уведомление</span>Критическое значение
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(F_{crit} = 3.000\)</span></p>
+</div>
+</div>
+<p>Получите результаты неробастного F-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">F-statistic</th>
+<th style="text-align: right;">Prob(F-statistic)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.149</td>
+<td style="text-align: right;">0.006</td>
+</tr>
+</tbody>
+</table>
+<p>Какой можно сделать вывод?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Вывод">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Вывод
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Гипотеза <strong>отвергается</strong>.</p>
+</div>
+</div>
+<p>Получите результаты робастного F-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">F-statistic</th>
+<th style="text-align: right;">Prob(F-statistic)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2.961</td>
+<td style="text-align: right;">0.052</td>
+</tr>
+</tbody>
+</table>
+<p>Какой можно сделать вывод?</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Вывод">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Важное уведомление</span>Вывод
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Гипотеза <strong>не отвергается</strong>.</p>
+</div>
+</div>
 </section>
-<section id="гипотеза-h₀-beta_unem-beta_dep-beta_married-0-α0.01" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="гипотеза-h₀-beta_unem-beta_dep-beta_married-0-α0.01"><span class="header-section-number">4.1.2</span> Гипотеза H₀: <span class="math inline">\(\beta_{unem} = \beta_{dep} = \beta_{married} = 0\)</span> (α=0.01)</h3>
-<ul>
-<li><strong>F-stat (OLS):</strong> 4.054, p-value: 0.007</li>
-<li><strong>F-stat (Robust HC3):</strong> 3.469, p-value: 0.016</li>
-<li><strong>F_{crit}</strong> (α=0.01) = 3.792</li>
-</ul>
-<p><strong>Вывод:</strong> Гипотеза <strong>не отвергается</strong> — переменные незначимы совместно</p>
+<section id="гипотеза-2-совместная-значимость-unem-dep-married" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="гипотеза-2-совместная-значимость-unem-dep-married"><span class="header-section-number">4.1.2</span> Гипотеза 2: совместная значимость unem, dep, married</h3>
+<p>Тестируется совместная значимость <code>unem</code>, <code>dep</code> и <code>married</code>, т.е. гипотеза <span class="math inline">\(H_0:\beta_{unem}=\beta_{dep}=\beta_{married}=0\)</span>.</p>
+<p><span style="color: blue">Зафиксируем уровень значимости 1%.</span></p>
+<p>Вычислите критическое значение для гипотезы. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Критическое значение">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Уведомление</span>Критическое значение
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(F_{crit} = 3.792\)</span></p>
+</div>
+</div>
+<p>Получите результаты неробастного F-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">F-statistic</th>
+<th style="text-align: right;">Prob(F-statistic)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">4.054</td>
+<td style="text-align: right;">0.007</td>
+</tr>
+</tbody>
+</table>
+<p>Какой можно сделать вывод?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Вывод">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Совет</span>Вывод
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Гипотеза <strong>отвергается</strong> — переменные <strong>значимы совместно</strong>.</p>
+</div>
+</div>
+<p>Получите результаты робастного F-теста. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">F-statistic</th>
+<th style="text-align: right;">Prob(F-statistic)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">3.469</td>
+<td style="text-align: right;">0.016</td>
+</tr>
+</tbody>
+</table>
+<p>Какой можно сделать вывод?</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Вывод">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Важное уведомление</span>Вывод
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Гипотеза <strong>не отвергается</strong> — переменные <strong>незначимы совместно</strong>.</p>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -1647,10 +2353,82 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 <section id="approve-equation" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="approve-equation"><span class="header-section-number">5.1</span> approve equation</h2>
 <p>Для датасета <code>loanapp</code> рассмотрим регрессию <strong>approve на mortno, unem, dep, married</strong></p>
-<p><strong>Данные для прогнозирования:</strong></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">approve (HC3)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">mortno</td>
+<td style="text-align: left;">0.071***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.015)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">unem</td>
+<td style="text-align: left;">-0.007*</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.004)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">dep</td>
+<td style="text-align: left;">-0.019**</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.008)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">married</td>
+<td style="text-align: left;">0.046***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.018)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Intercept</td>
+<td style="text-align: left;">0.865***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.020)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R-squared</td>
+<td style="text-align: left;">0.019</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R-squared Adj.</td>
+<td style="text-align: left;">0.017</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nobs</td>
+<td style="text-align: left;">1971</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F-stat</td>
+<td style="text-align: left;">9.475</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prob(F-stat)</td>
+<td style="text-align: left;">0.000</td>
+</tr>
+</tbody>
+</table>
+<p><em>Signif. codes:</em> *** <span class="math inline">\(p&lt;0.01\)</span>, ** <span class="math inline">\(p&lt;0.05\)</span>, * <span class="math inline">\(p&lt;0.1\)</span></p>
+<p>Рассмотрим трех людей с характеристиками</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Человек</th>
 <th style="text-align: right;">mortno</th>
 <th style="text-align: right;">unem</th>
 <th style="text-align: right;">dep</th>
@@ -1660,17 +2438,20 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
 <td style="text-align: right;">3.2</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">2</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">3.9</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">3</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.8</td>
 <td style="text-align: right;">0</td>
@@ -1678,20 +2459,118 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </tr>
 </tbody>
 </table>
-<p><strong>Прогнозы вероятности одобрения кредита:</strong></p>
-<ul>
-<li>Человек 1: P(approve=1) = 0.959</li>
-<li>Человек 2: P(approve=1) = 0.890</li>
-<li>Человек 3: P(approve=1) = 0.899</li>
-</ul>
-</section>
-<section id="labour-force-equation" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="labour-force-equation"><span class="header-section-number">5.2</span> labour force equation</h2>
-<p>Для датасета <code>TableF5-1</code> рассмотрим регрессию <strong>LFP на WA, I(WA ** 2), CIT, UN, log(FAMINC)</strong></p>
-<p><strong>Данные для прогнозирования:</strong></p>
+<p>Вычислите прогноз для каждого человека по подогнанной модели. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<p><strong>Прогнозы вероятности одобрения кредита <span class="math inline">\({\textrm P}(approve=1)\)</span>:</strong></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
+<th style="text-align: right;">Человек</th>
+<th style="text-align: right;">Прогноз</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.959</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.889</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.898</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="labour-force-equation" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="labour-force-equation"><span class="header-section-number">5.2</span> labour force equation</h2>
+<p>Для датасета <code>TableF5-1</code> рассмотрим регрессию <strong>LFP на WA, I(WA ** 2), CIT, UN, np.log(FAMINC)</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">LFP (HC3)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">WA</td>
+<td style="text-align: left;">0.042*</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.025)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I(WA ** 2)</td>
+<td style="text-align: left;">-0.001*</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.000)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CIT</td>
+<td style="text-align: left;">-0.039</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.040)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">UN</td>
+<td style="text-align: left;">-0.004</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.006)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">np.log(FAMINC)</td>
+<td style="text-align: left;">0.140***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.037)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Intercept</td>
+<td style="text-align: left;">-1.525**</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.600)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R-squared</td>
+<td style="text-align: left;">0.033</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R-squared Adj.</td>
+<td style="text-align: left;">0.027</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nobs</td>
+<td style="text-align: left;">753</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F-stat</td>
+<td style="text-align: left;">4.994</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prob(F-stat)</td>
+<td style="text-align: left;">0.000</td>
+</tr>
+</tbody>
+</table>
+<p><em>Signif. codes:</em> *** <span class="math inline">\(p&lt;0.01\)</span>, ** <span class="math inline">\(p&lt;0.05\)</span>, * <span class="math inline">\(p&lt;0.1\)</span></p>
+<p>Рассмотрим трех людей с характеристиками</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Человек</th>
 <th style="text-align: right;">WA</th>
 <th style="text-align: right;">CIT</th>
 <th style="text-align: right;">UN</th>
@@ -1700,18 +2579,21 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: right;">1</td>
 <td style="text-align: right;">34</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">35000</td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">2</td>
 <td style="text-align: right;">36</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">48500</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">3</td>
 <td style="text-align: right;">42</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">7.5</td>
@@ -1719,25 +2601,73 @@ P(LFP=1) = \beta_0 + \beta_1 WA + \beta_2 WE + \beta_3 CIT + \beta_4 CIT+\beta_5
 </tr>
 </tbody>
 </table>
-<p><strong>Прогнозы вероятности участия в рабочей силе (LFP=1):</strong></p>
-<ul>
-<li>Человек 1: P(LFP=1) = 0.686</li>
-<li>Человек 2: P(LFP=1) = 0.771</li>
-<li>Человек 3: P(LFP=1) = 0.804</li>
-</ul>
+<p>Вычислите прогноз для каждого человека по подогнанной модели. <strong>Ответ округлите до 3-х десятичных знаков.</strong></p>
+<p><strong>Прогнозы вероятности участия в рабочей силе <span class="math inline">\({\textrm P}(LFP=1)\)</span>:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Человек</th>
+<th style="text-align: right;">Прогноз</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.686</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.771</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.804</td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 <section id="вопросы-адекватности-модели" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Вопросы адекватности модели</h1>
-<section id="approve-equation-график-фактических-и-прогнозируемых-значений" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="approve-equation-график-фактических-и-прогнозируемых-значений"><span class="header-section-number">6.1</span> approve equation — график фактических и прогнозируемых значений</h2>
+<section id="approve-equation-4" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="approve-equation-4"><span class="header-section-number">6.1</span> approve equation</h2>
 <p>Для датасета <code>loanapp</code> рассмотрим регрессию <strong>approve на appinc, I(appinc ** 2), mortno, unem, dep, male, married, yjob, self</strong></p>
-<p><img src="list21-LPM_files/figure-html/cell-46-output-1.png" width="807" height="565"></p>
+<div id="cell-154" class="cell" data-message="false" data-execution_count="73">
+<p><strong>Доля правильных прогнозов (Accuracy) на обучающей выборке:</strong> <code>87.6%</code></p>
+<p><br></p>
+<section id="анализ-переменной-appinc" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="анализ-переменной-appinc"><span class="header-section-number">6.1.1</span> Анализ переменной <code>appinc</code></h3>
+<p><img src="list21-LPM_files/figure-html/cell-74-output-3.png" width="757" height="373"> <br></p>
 </section>
-<section id="labour-force-equation-график-фактических-и-прогнозируемых-значений" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="labour-force-equation-график-фактических-и-прогнозируемых-значений"><span class="header-section-number">6.2</span> labour force equation — график фактических и прогнозируемых значений</h2>
+<section id="анализ-переменной-dep" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="анализ-переменной-dep"><span class="header-section-number">6.1.2</span> Анализ переменной <code>dep</code></h3>
+<p><img src="list21-LPM_files/figure-html/cell-74-output-5.png" width="759" height="373"> <br></p>
+</section>
+<section id="анализ-переменной-yjob" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="анализ-переменной-yjob"><span class="header-section-number">6.1.3</span> Анализ переменной <code>yjob</code></h3>
+<p><img src="list21-LPM_files/figure-html/cell-74-output-7.png" width="759" height="373"></p>
+</section>
+</div>
+</section>
+<section id="labour-force-equation-3" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="labour-force-equation-3"><span class="header-section-number">6.2</span> labour force equation</h2>
 <p>Для датасета <code>TableF5-1</code> рассмотрим регрессию <strong>LFP на WA, I(WA ** 2), WE, KL6, K618, CIT, UN, np.log(FAMINC)</strong></p>
-<p><img src="list21-LPM_files/figure-html/cell-47-output-1.png" width="807" height="565"></p>
+<div id="cell-156" class="cell" data-message="false" data-execution_count="74">
+<p><strong>Доля правильных прогнозов (Accuracy) на обучающей выборке:</strong> <code>66.4%</code></p>
+<p><br></p>
+<section id="анализ-переменной-wa" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="анализ-переменной-wa"><span class="header-section-number">6.2.1</span> Анализ переменной <code>WA</code></h3>
+<p><img src="list21-LPM_files/figure-html/cell-75-output-3.png" width="759" height="373"> <br></p>
+</section>
+<section id="анализ-переменной-logfaminc" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="анализ-переменной-logfaminc"><span class="header-section-number">6.2.2</span> Анализ переменной <code>log(FAMINC)</code></h3>
+<p><img src="list21-LPM_files/figure-html/cell-75-output-5.png" width="759" height="373"> <br></p>
+</section>
+<section id="анализ-переменной-un" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="анализ-переменной-un"><span class="header-section-number">6.2.3</span> Анализ переменной <code>UN</code></h3>
+<p><img src="list21-LPM_files/figure-html/cell-75-output-7.png" width="759" height="373"></p>
+</section>
+</div>
 </section>
 </section>
 
