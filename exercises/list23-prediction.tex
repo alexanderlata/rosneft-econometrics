@@ -1,0 +1,419 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  russian,
+]{article}
+\usepackage{xcolor}
+\usepackage[top=20mm,left=20mm,right=20mm,bottom=20mm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Times New Roman}
+  \setsansfont[]{Arial}
+  \setmonofont[]{Courier New}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off,provide=*]{babel}
+\else
+\usepackage[bidi=default,shorthands=off,provide=*]{babel}
+\fi
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Times New Roman}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Содержание}
+\else
+  \newcommand\contentsname{Содержание}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Список Иллюстраций}
+\else
+  \newcommand\listfigurename{Список Иллюстраций}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Список Таблиц}
+\else
+  \newcommand\listtablename{Список Таблиц}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Рисунок}
+\else
+  \newcommand\figurename{Рисунок}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Таблица}
+\else
+  \newcommand\tablename{Таблица}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Список}
+\newcommand*\listoflistings{\listof{codelisting}{Список Каталогов}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Задачи по Эконометрике-2: Прогнозирование для logit/probit-моделей},
+  pdfauthor={Н.В. Артамонов, А. Н. Лата (МГИМО МИД России)},
+  pdflang={ru},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Задачи по Эконометрике-2: Прогнозирование для
+logit/probit-моделей}
+\author{Н.В. Артамонов, А. Н. Лата (МГИМО МИД России)}
+\date{}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Содержание}
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+
+\section{labour force equation}\label{labour-force-equation}
+
+Для датасета \texttt{TableF5-1} рассмотрим регрессию \textbf{LFP на WA,
+log(FAMINC), WE, KL6, K618, CIT, UN} трёх спецификаций: - LPM - logit -
+probit
+
+Результаты подгонки:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+& LPM & logit & probit \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Dep. Variable & LFP & LFP & LFP \\
+WA & -0.013*** & -0.063*** & -0.038*** \\
+& (0.003) & (0.013) & (0.008) \\
+np.log(FAMINC) & 0.075** & 0.341** & 0.205** \\
+& (0.037) & (0.172) & (0.104) \\
+WE & 0.038*** & 0.179*** & 0.108*** \\
+& (0.008) & (0.040) & (0.024) \\
+KL6 & -0.302*** & -1.443*** & -0.868*** \\
+& (0.036) & (0.194) & (0.112) \\
+K618 & -0.018 & -0.095 & -0.057 \\
+& (0.014) & (0.067) & (0.040) \\
+CIT & -0.048 & -0.214 & -0.126 \\
+& (0.038) & (0.176) & (0.107) \\
+UN & -0.004 & -0.017 & -0.011 \\
+& (0.006) & (0.026) & (0.016) \\
+Intercept & 0.079 & -1.856 & -1.108 \\
+& (0.356) & (1.679) & (1.014) \\
+R-squared & 0.130 & & \\
+R-squared Adj. & 0.122 & & \\
+\end{longtable}
+}
+
+\emph{Signif. codes:} \texttt{***} \(p<0.01\), \texttt{**} \(p<0.05\),
+\texttt{*} \(p<0.1\)
+
+Рассмотрим несколько человек с характеристиками. Постройте прогноз для
+каждого. \textbf{Ответ округлите до 3-х десятичных знаков.}
+
+\textbf{Характеристики:}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}rrrrrrr@{}}
+\toprule\noalign{}
+WA & FAMINC & WE & KL6 & K618 & CIT & UN \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+35 & 12500 & 15 & 2 & 0 & 1 & 5 \\
+40 & 9800 & 12 & 1 & 2 & 0 & 7.5 \\
+42 & 67800 & 14 & 2 & 1 & 1 & 3 \\
+\end{longtable}
+}
+
+\textbf{Ответ:}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}rrrr@{}}
+\toprule\noalign{}
+Человек & Прогноз LPM & Прогноз logit & Прогноз probit \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 0.221 & 0.209 & 0.214 \\
+2 & 0.329 & 0.3 & 0.307 \\
+3 & 0.207 & 0.192 & 0.196 \\
+\end{longtable}
+}
+
+\section{approve equation}\label{approve-equation}
+
+Для датасета \texttt{loanapp} рассмотрим регрессию \textbf{approve на
+appinc/100, mortno, unem, dep, male} трёх спецификаций: - LPM - logit -
+probit
+
+Результаты подгонки:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+& LPM & logit & probit \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Dep. Variable & approve & approve & approve \\
+I(appinc / 100) & -0.014* & -0.106 & -0.056 \\
+& (0.009) & (0.067) & (0.038) \\
+mortno & 0.079*** & 0.817*** & 0.422*** \\
+& (0.016) & (0.170) & (0.086) \\
+unem & -0.008** & -0.065** & -0.036** \\
+& (0.003) & (0.029) & (0.016) \\
+dep & -0.012* & -0.106* & -0.055* \\
+& (0.007) & (0.061) & (0.033) \\
+male & 0.019 & 0.173 & 0.093 \\
+& (0.019) & (0.176) & (0.094) \\
+Intercept & 0.886*** & 2.032*** & 1.198*** \\
+& (0.022) & (0.193) & (0.105) \\
+R-squared & 0.017 & & \\
+R-squared Adj. & 0.014 & & \\
+\end{longtable}
+}
+
+\emph{Signif. codes:} \texttt{***} \(p<0.01\), \texttt{**} \(p<0.05\),
+\texttt{*} \(p<0.1\)
+
+Рассмотрим несколько человек с характеристиками. Постройте прогноз для
+каждого. \textbf{Ответ округлите до 3-х десятичных знаков.}
+
+\textbf{Характеристики:}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}rrrrr@{}}
+\toprule\noalign{}
+appinc & mortno & unem & dep & male \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+120 & 1 & 1.8 & 0 & 1 \\
+48 & 1 & 3.2 & 0 & 0 \\
+82 & 0 & 3.9 & 1 & 1 \\
+\end{longtable}
+}
+
+\textbf{Ответ:}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}rrrr@{}}
+\toprule\noalign{}
+Человек & Прогноз LPM & Прогноз logit & Прогноз probit \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 0.953 & 0.941 & 0.943 \\
+2 & 0.933 & 0.93 & 0.93 \\
+3 & 0.851 & 0.853 & 0.853 \\
+\end{longtable}
+}
+
+\section{swiss labour force equation}\label{swiss-labour-force-equation}
+
+Для датасета \texttt{SwissLabor} рассмотрим регрессию
+\textbf{participation на income, income\^{}2, age, age\^{}2, youngkids,
+oldkids} трёх спецификаций: - LPM - logit - probit
+
+Результаты подгонки:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+& LPM & logit & probit \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Dep. Variable & participation & participation & participation \\
+income & 0.269 & 3.146 & 1.973 \\
+& (0.654) & (3.400) & (2.090) \\
+I(income ** 2) & -0.025 & -0.211 & -0.131 \\
+& (0.031) & (0.161) & (0.099) \\
+age & 0.790*** & 3.875*** & 2.347*** \\
+& (0.131) & (0.669) & (0.397) \\
+I(age ** 2) & -0.111*** & -0.544*** & -0.329*** \\
+& (0.016) & (0.083) & (0.049) \\
+youngkids & -0.227*** & -1.065*** & -0.637*** \\
+& (0.032) & (0.166) & (0.096) \\
+oldkids & -0.052*** & -0.250*** & -0.151*** \\
+& (0.017) & (0.083) & (0.050) \\
+Intercept & -0.716 & -15.282 & -9.643 \\
+& (3.488) & (17.960) & (11.066) \\
+R-squared & 0.155 & & \\
+R-squared Adj. & 0.149 & & \\
+\end{longtable}
+}
+
+\emph{Signif. codes:} \texttt{***} \(p<0.01\), \texttt{**} \(p<0.05\),
+\texttt{*} \(p<0.1\)
+
+Рассмотрим несколько человек с характеристиками. Постройте прогноз для
+каждого. \textbf{Ответ округлите до 3-х десятичных знаков.}
+
+\textbf{Характеристики:}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}rrrr@{}}
+\toprule\noalign{}
+income & age & youngkids & oldkids \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+11.367 & 2.5 & 0 & 0 \\
+9.217 & 3.7 & 2 & 0 \\
+10.686 & 4.2 & 2 & 1 \\
+\end{longtable}
+}
+
+\textbf{Ответ:}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}rrrr@{}}
+\toprule\noalign{}
+Человек & Прогноз LPM & Прогноз logit & Прогноз probit \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 0.419 & 0.367 & 0.371 \\
+2 & 0.606 & 0.626 & 0.624 \\
+3 & 0.18 & 0.182 & 0.186 \\
+\end{longtable}
+}
+
+
+
+
+\end{document}
