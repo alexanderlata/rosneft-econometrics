@@ -1,0 +1,571 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  russian,
+]{article}
+\usepackage{xcolor}
+\usepackage[top=20mm,left=20mm,right=20mm,bottom=20mm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Times New Roman}
+  \setsansfont[]{Arial}
+  \setmonofont[]{Courier New}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off,provide=*]{babel}
+\else
+\usepackage[bidi=default,shorthands=off,provide=*]{babel}
+\fi
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Times New Roman}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Содержание}
+\else
+  \newcommand\contentsname{Содержание}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Список Иллюстраций}
+\else
+  \newcommand\listfigurename{Список Иллюстраций}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Список Таблиц}
+\else
+  \newcommand\listtablename{Список Таблиц}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Рисунок}
+\else
+  \newcommand\figurename{Рисунок}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Таблица}
+\else
+  \newcommand\tablename{Таблица}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Список}
+\newcommand*\listoflistings{\listof{codelisting}{Список Каталогов}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Задачи по Эконометрике-2: Качество подгонки и сравнение моделей},
+  pdfauthor={Н.В. Артамонов, А. Н. Лата (МГИМО МИД России)},
+  pdflang={ru},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Задачи по Эконометрике-2: Качество подгонки и сравнение моделей}
+\author{Н.В. Артамонов, А. Н. Лата (МГИМО МИД России)}
+\date{}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Содержание}
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+
+\section{Качество
+подгонки}\label{ux43aux430ux447ux435ux441ux442ux432ux43e-ux43fux43eux434ux433ux43eux43dux43aux438}
+
+\subsection{labour force equation \#1
+(probit)}\label{labour-force-equation-1-probit}
+
+Для датасета \texttt{TableF5-1} рассмотрим несколько probit-регрессий:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Модель 1:}
+  \(P(LFP=1) = \Phi(\beta_0 + \beta_1 WA + \beta_2 WA^2 + \beta_3 WE + \beta_4 KL6 + \beta_5 K618 + \beta_6 CIT + \beta_7 UN + \beta_8 \log(FAMINC))\)
+\item
+  \textbf{Модель 2:}
+  \(P(LFP=1) = \Phi(\beta_0 + \beta_1 WE + \beta_2 KL6 + \beta_3 K618 + \beta_4 CIT + \beta_5 UN + \beta_6 \log(FAMINC))\)
+\item
+  \textbf{Модель 3:}
+  \(P(LFP=1) = \Phi(\beta_0 + \beta_1 WA + \beta_2 WA^2 + \beta_3 WE + \beta_4 KL6 + \beta_5 \log(FAMINC))\)
+\item
+  \textbf{Модель 4:}
+  \(P(LFP=1) = \Phi(\beta_0 + \beta_1 WA + \beta_2 WA^2 + \beta_3 WE + \beta_4 KL6)\)
+\end{itemize}
+
+\textbf{Результаты оценивания:}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lllll@{}}
+\toprule\noalign{}
+& Модель 1 & Модель 2 & Модель 3 & Модель 4 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+WA & 0.008 & & -0.018 & -0.006 \\
+& (0.070) & & (0.069) & (0.068) \\
+I(WA ** 2) & -0.001 & & -0.000 & -0.000 \\
+& (0.001) & & (0.001) & (0.001) \\
+WE & 0.109*** & 0.124*** & 0.109*** & 0.123*** \\
+& (0.024) & (0.024) & (0.024) & (0.022) \\
+KL6 & -0.851*** & -0.621*** & -0.847*** & -0.855*** \\
+& (0.115) & (0.098) & (0.114) & (0.115) \\
+K618 & -0.063 & 0.031 & & \\
+& (0.042) & (0.036) & & \\
+CIT & -0.128 & -0.165 & & \\
+& (0.107) & (0.106) & & \\
+UN & -0.011 & -0.017 & & \\
+& (0.016) & (0.016) & & \\
+np.log(FAMINC) & 0.200* & 0.170* & 0.163 & \\
+& (0.105) & (0.103) & (0.101) & \\
+Intercept & -2.005 & -2.673*** & -1.435 & -0.281 \\
+& (1.705) & (0.957) & (1.667) & (1.503) \\
+\end{longtable}
+}
+
+\emph{Signif. codes:} \texttt{***} \(p<0.01\), \texttt{**} \(p<0.05\),
+\texttt{*} \(p<0.1\)
+
+\textbf{Показатели качества:}
+
+Для каждой регрессии вычислите следующие показатели качества подгонки
+модели: \(R^2_{pseudo}\), \(adj.R^2_{pseudo}\), Cox \& Snell,
+Nagelkerke/Cragg \& Uhler, Efron, McKelvey \& Zavoina. \textbf{Ответ
+округлите до 3-х десятичных знаков.}
+
+Ответ:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0968}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1398}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1828}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1290}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1505}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0968}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2043}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+Model
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+pseudo.R2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+adj.pseudo.R2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+CoxSnell
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Nagelkerke
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Efron
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+McKelveyZavoina
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 0.102 & 0.085 & 0.13 & 0.175 & 0.133 & 0.207 \\
+2 & 0.076 & 0.062 & 0.099 & 0.133 & 0.1 & 0.158 \\
+3 & 0.097 & 0.086 & 0.125 & 0.167 & 0.127 & 0.199 \\
+4 & 0.095 & 0.085 & 0.122 & 0.163 & 0.123 & 0.195 \\
+\end{longtable}
+}
+
+\subsection{approve equation \#1
+(logit)}\label{approve-equation-1-logit}
+
+Для датасета \texttt{loanapp} рассмотрим несколько logit-регрессий:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Модель 1:}
+  \(P(approve=1) = \Lambda(\beta_0 + \beta_1 appinc + \beta_2 appinc^2 + \beta_3 mortno + \beta_4 unem + \beta_5 dep + \beta_6 male + \beta_7 married + \beta_8 yjob + \beta_9 self)\)
+\item
+  \textbf{Модель 2:}
+  \(P(approve=1) = \Lambda(\beta_0 + \beta_1 mortno + \beta_2 unem + \beta_3 dep + \beta_4 male + \beta_5 married + \beta_6 yjob + \beta_7 self)\)
+\item
+  \textbf{Модель 3:}
+  \(P(approve=1) = \Lambda(\beta_0 + \beta_1 appinc + \beta_2 appinc^2 + \beta_3 mortno + \beta_4 unem + \beta_5 dep + \beta_6 married)\)
+\item
+  \textbf{Модель 4:}
+  \(P(approve=1) = \Lambda(\beta_0 + \beta_1 appinc + \beta_2 appinc^2 + \beta_3 mortno + \beta_4 dep)\)
+\end{itemize}
+
+\textbf{Результаты оценивания:}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lllll@{}}
+\toprule\noalign{}
+& Модель 1 & Модель 2 & Модель 3 & Модель 4 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+appinc & 0.004* & & 0.003 & 0.004* \\
+& (0.002) & & (0.002) & (0.002) \\
+I(appinc ** 2) & -0.000** & & -0.000** & -0.000** \\
+& (0.000) & & (0.000) & (0.000) \\
+mortno & 0.707*** & 0.770*** & 0.697*** & 0.741*** \\
+& (0.175) & (0.172) & (0.175) & (0.174) \\
+unem & -0.050* & -0.052* & -0.061** & \\
+& (0.030) & (0.029) & (0.029) & \\
+dep & -0.155** & -0.168*** & -0.157** & -0.103* \\
+& (0.065) & (0.064) & (0.065) & (0.061) \\
+male & -0.021 & 0.022 & & \\
+& (0.188) & (0.186) & & \\
+married & 0.398** & 0.417** & 0.398** & \\
+& (0.163) & (0.162) & (0.156) & \\
+yjob & -0.010 & -0.007 & & \\
+& (0.065) & (0.065) & & \\
+self & -0.359* & -0.314 & & \\
+& (0.200) & (0.195) & & \\
+Intercept & 1.681*** & 1.860*** & 1.709*** & 1.600*** \\
+& (0.228) & (0.193) & (0.207) & (0.163) \\
+\end{longtable}
+}
+
+\emph{Signif. codes:} \texttt{***} \(p<0.01\), \texttt{**} \(p<0.05\),
+\texttt{*} \(p<0.1\)
+
+\textbf{Показатели качества:}
+
+Для каждой регрессии вычислите следующие показатели качества подгонки
+модели: \(R^2_{pseudo}\), \(adj.R^2_{pseudo}\), Cox \& Snell,
+Nagelkerke/Cragg \& Uhler, Efron, McKelvey \& Zavoina. \textbf{Ответ
+округлите до 3-х десятичных знаков.}
+
+Ответ:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0968}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1398}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1828}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1290}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1505}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0968}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2043}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+Model
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+pseudo.R2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+adj.pseudo.R2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+CoxSnell
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Nagelkerke
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Efron
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+McKelveyZavoina
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 0.033 & 0.019 & 0.024 & 0.046 & 0.027 & 0.066 \\
+2 & 0.028 & 0.017 & 0.021 & 0.039 & 0.022 & 0.06 \\
+3 & 0.031 & 0.021 & 0.023 & 0.043 & 0.026 & 0.062 \\
+4 & 0.024 & 0.017 & 0.018 & 0.033 & 0.02 & 0.05 \\
+\end{longtable}
+}
+
+\section{Сравнение
+моделей}\label{ux441ux440ux430ux432ux43dux435ux43dux438ux435-ux43cux43eux434ux435ux43bux435ux439}
+
+\subsection{labour force equation \#1
+(probit)}\label{labour-force-equation-1-probit-1}
+
+Для датасета \texttt{TableF5-1} рассмотрим те же спецификации
+probit-регрессий:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Модель 1:}
+  \(P(LFP=1) = \Phi(\beta_0 + \beta_1 WA + \beta_2 WA^2 + \beta_3 WE + \beta_4 KL6 + \beta_5 K618 + \beta_6 CIT + \beta_7 UN + \beta_8 \log(FAMINC))\)
+\item
+  \textbf{Модель 2:}
+  \(P(LFP=1) = \Phi(\beta_0 + \beta_1 WE + \beta_2 KL6 + \beta_3 K618 + \beta_4 CIT + \beta_5 UN + \beta_6 \log(FAMINC))\)
+\item
+  \textbf{Модель 3:}
+  \(P(LFP=1) = \Phi(\beta_0 + \beta_1 WA + \beta_2 WA^2 + \beta_3 WE + \beta_4 KL6 + \beta_5 \log(FAMINC))\)
+\item
+  \textbf{Модель 4:}
+  \(P(LFP=1) = \Phi(\beta_0 + \beta_1 WA + \beta_2 WA^2 + \beta_3 WE + \beta_4 KL6)\)
+\end{itemize}
+
+Для каждой модели вычислите показатели информационных критериев AIC \&
+BIC и \(adj.R^2_{pseudo}\). \textbf{Ответ округлите до 3-х десятичных
+знаков.}
+
+Ответ:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lllll@{}}
+\toprule\noalign{}
+& Модель 1 & Модель 2 & Модель 3 & Модель 4 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+WA & 0.008 & & -0.018 & -0.006 \\
+& (0.070) & & (0.069) & (0.068) \\
+I(WA ** 2) & -0.001 & & -0.000 & -0.000 \\
+& (0.001) & & (0.001) & (0.001) \\
+WE & 0.109*** & 0.124*** & 0.109*** & 0.123*** \\
+& (0.024) & (0.024) & (0.024) & (0.022) \\
+KL6 & -0.851*** & -0.621*** & -0.847*** & -0.855*** \\
+& (0.115) & (0.098) & (0.114) & (0.115) \\
+K618 & -0.063 & 0.031 & & \\
+& (0.042) & (0.036) & & \\
+CIT & -0.128 & -0.165 & & \\
+& (0.107) & (0.106) & & \\
+UN & -0.011 & -0.017 & & \\
+& (0.016) & (0.016) & & \\
+np.log(FAMINC) & 0.200* & 0.170* & 0.163 & \\
+& (0.105) & (0.103) & (0.101) & \\
+Intercept & -2.005 & -2.673*** & -1.435 & -0.281 \\
+& (1.705) & (0.957) & (1.667) & (1.503) \\
+AIC & 942.680 & 965.398 & 941.392 & 941.981 \\
+BIC & 984.297 & 997.767 & 969.137 & 965.102 \\
+Nobs & 753 & 753 & 753 & 753 \\
+R2\_adj & 0.085 & 0.062 & 0.086 & 0.085 \\
+\end{longtable}
+}
+
+\emph{Signif. codes:} \texttt{***} \(p<0.01\), \texttt{**} \(p<0.05\),
+\texttt{*} \(p<0.1\)
+
+Какая модель предпочтительней по информационным критериям и
+\(adj.R^2_{pseudo}\)?
+
+Ответ:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lr@{}}
+\toprule\noalign{}
+Критерий & Регрессия \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+AIC & 3 \\
+BIC & 4 \\
+adj.pseudo.R2 & 3 \\
+\end{longtable}
+}
+
+\subsection{approve equation \#1
+(logit)}\label{approve-equation-1-logit-1}
+
+Для датасета \texttt{loanapp} рассмотрим несколько logit-регрессий:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Модель 1:}
+  \(P(approve=1) = \Lambda(\beta_0 + \beta_1 appinc + \beta_2 appinc^2 + \beta_3 mortno + \beta_4 unem + \beta_5 dep + \beta_6 male + \beta_7 married + \beta_8 yjob + \beta_9 self)\)
+\item
+  \textbf{Модель 2:}
+  \(P(approve=1) = \Lambda(\beta_0 + \beta_1 mortno + \beta_2 unem + \beta_3 dep + \beta_4 male + \beta_5 married + \beta_6 yjob + \beta_7 self)\)
+\item
+  \textbf{Модель 3:}
+  \(P(approve=1) = \Lambda(\beta_0 + \beta_1 appinc + \beta_2 appinc^2 + \beta_3 mortno + \beta_4 unem + \beta_5 dep + \beta_6 married)\)
+\item
+  \textbf{Модель 4:}
+  \(P(approve=1) = \Lambda(\beta_0 + \beta_1 appinc + \beta_2 appinc^2 + \beta_3 mortno + \beta_4 dep)\)
+\end{itemize}
+
+Для каждой модели вычислите показатели информационных критериев AIC \&
+BIC и \(adj.R^2_{pseudo}\). \textbf{Ответ округлите до 3-х десятичных
+знаков.}
+
+Ответ:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lllll@{}}
+\toprule\noalign{}
+& Модель 1 & Модель 2 & Модель 3 & Модель 4 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+appinc & 0.004* & & 0.003 & 0.004* \\
+& (0.002) & & (0.002) & (0.002) \\
+I(appinc ** 2) & -0.000** & & -0.000** & -0.000** \\
+& (0.000) & & (0.000) & (0.000) \\
+mortno & 0.707*** & 0.770*** & 0.697*** & 0.741*** \\
+& (0.175) & (0.172) & (0.175) & (0.174) \\
+unem & -0.050* & -0.052* & -0.061** & \\
+& (0.030) & (0.029) & (0.029) & \\
+dep & -0.155** & -0.168*** & -0.157** & -0.103* \\
+& (0.065) & (0.064) & (0.065) & (0.061) \\
+male & -0.021 & 0.022 & & \\
+& (0.188) & (0.186) & & \\
+married & 0.398** & 0.417** & 0.398** & \\
+& (0.163) & (0.162) & (0.156) & \\
+yjob & -0.010 & -0.007 & & \\
+& (0.065) & (0.065) & & \\
+self & -0.359* & -0.314 & & \\
+& (0.200) & (0.195) & & \\
+Intercept & 1.681*** & 1.860*** & 1.709*** & 1.600*** \\
+& (0.228) & (0.193) & (0.207) & (0.163) \\
+AIC & 1447.463 & 1450.862 & 1444.586 & 1451.140 \\
+BIC & 1503.326 & 1495.552 & 1483.690 & 1479.072 \\
+Nobs & 1971 & 1971 & 1971 & 1971 \\
+R2\_adj & 0.019 & 0.017 & 0.021 & 0.017 \\
+\end{longtable}
+}
+
+\emph{Signif. codes:} \texttt{***} \(p<0.01\), \texttt{**} \(p<0.05\),
+\texttt{*} \(p<0.1\)
+
+Какая модель предпочтительней по информационным критериям и
+\(adj.R^2_{pseudo}\)?
+
+Ответ:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lr@{}}
+\toprule\noalign{}
+Критерий & Регрессия \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+AIC & 3 \\
+BIC & 4 \\
+adj.pseudo.R2 & 3 \\
+\end{longtable}
+}
+
+
+
+
+\end{document}
