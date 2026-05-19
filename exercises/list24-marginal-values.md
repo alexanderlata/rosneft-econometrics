@@ -235,7 +235,7 @@ np.log(FAMINC), WE, KL6, K618, CIT, UN** трёх спецификаций:
 # swiss labour force equation
 
 Для датасета `SwissLabour` рассмотрим регрессию **participation на
-income, age, I(age \*\* ), youngkids, oldkids** трёх спецификаций:
+income, age, I(age \*\* 2), youngkids, oldkids** трёх спецификаций:
 
 - LPM
 - logit
